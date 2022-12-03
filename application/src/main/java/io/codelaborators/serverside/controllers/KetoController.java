@@ -1,7 +1,7 @@
 package io.codelaborators.serverside.controllers;
 
-import io.codelaborators.serverside.models.Recipe;
-import io.codelaborators.serverside.repositories.RecipeRepository;
+import io.codelaborators.serverside.models.Keto;
+import io.codelaborators.serverside.repositories.KetoRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,13 +12,17 @@ import java.util.Collection;
 @RestController
 @CrossOrigin
 
-public class RecipeController {
+
+public class KetoController {
 
     @Resource
-    private RecipeRepository recipeRepo;
+    private KetoRepository ketoRepo;
 
-    @GetMapping("/recipes")
-    public Collection<Recipe> getRecipes(){
-        return (Collection<Recipe>) recipeRepo.findAll();
+    @GetMapping ("/recipes/keto")
+    public Collection<Keto> getAllKetoRecipes(){
+
+        return (Collection<Keto>) ketoRepo.findAll();
     }
+
+
 }

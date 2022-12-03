@@ -16,7 +16,7 @@ public class GlutenFreeController {
     @Resource
     private GlutenFreeRepository glutenFreeRepo;
 
-    @GetMapping("/gluten-free-recipes")
+    @GetMapping("/recipes/gluten-free")
         public Collection<GlutenFree> getAllGlutenFreeRecipes(){
         return (Collection<GlutenFree>) glutenFreeRepo.findAll();
     }

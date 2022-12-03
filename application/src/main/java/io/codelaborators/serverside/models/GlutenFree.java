@@ -24,8 +24,8 @@ public class GlutenFree extends Recipe {
         return imageUrl;
     }
 
-    public GlutenFree(int prepTime, String difficultyLevel, List<String> ingredients, int servingSize, int cookTime, int calories, int fat, int protein, int sugar, int sodium, int carbs, List<String> steps, String imageUrl) {
-        super(prepTime, difficultyLevel, ingredients, servingSize, cookTime, calories, fat, protein, sugar, sodium, carbs, steps);
+    public GlutenFree(int prepTime, String difficultyLevel, List<String> ingredients, int servingSize, int cookTime, int calories, int fat, int protein, int sugar, int sodium, int carbs,String mealType, List<String> steps, String imageUrl) {
+        super(prepTime, difficultyLevel, ingredients, servingSize, cookTime, calories, fat, protein, sugar, sodium, carbs,mealType, steps);
         this.imageUrl = imageUrl;
     }
 
