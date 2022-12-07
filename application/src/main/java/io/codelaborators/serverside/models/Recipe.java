@@ -11,6 +11,7 @@ public class Recipe {
     @Id
     private Long id;
 
+    private String recipeName;
     private int prepTime;
     private String difficultyLevel;
     private List<String> ingredients;
@@ -27,6 +28,10 @@ public class Recipe {
 
     public Long getId() {
         return id;
+    }
+
+    public String getRecipeName() {
+        return recipeName;
     }
 
     public int getPrepTime() {
@@ -77,7 +82,8 @@ public class Recipe {
         return steps;
     }
     public String getMealType(){return mealType;}
-    public Recipe(int prepTime, String difficultyLevel, List<String> ingredients, int servingSize, int cookTime, int calories, int fat, int protein, int sugar, int sodium, int carbs, String mealType,List <String> steps) {
+    public Recipe(String recipeName,int prepTime, String difficultyLevel, List<String> ingredients, int servingSize, int cookTime, int calories, int fat, int protein, int sugar, int sodium, int carbs, String mealType,List <String> steps) {
+        this.recipeName = recipeName;
         this.prepTime = prepTime;
         this.difficultyLevel = difficultyLevel;
         this.ingredients = ingredients;
