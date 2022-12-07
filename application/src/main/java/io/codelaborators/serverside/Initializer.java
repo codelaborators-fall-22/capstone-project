@@ -12,19 +12,26 @@ import java.util.List;
 @Component
 public class Initializer implements CommandLineRunner {
 
+
 @Resource
 
 private GlutenFreeRepository glutenFreeRepo;
-
+@Resource
 private DairyFreeRepository dairyFreeRepo;
 
 @Resource
 private PaleoRepository paleoRepo;
 
+    @Resource
+    private KetoRepository ketoRepo;
+
+
+
 
 
     @Override
     public void run(String... args) throws Exception {
+
 
 
         List<String> glutenFreeRecipe1steps = new ArrayList<>();
@@ -179,5 +186,29 @@ private PaleoRepository paleoRepo;
         paleoRepo.save(paleoSweetPotatoPancakesRecipe);
 
 
+
+        List<String> ketoRecipe1Ingredients = new ArrayList<>();
+        List<String> ketoRecipes1Steps = new ArrayList<>();
+
+        ketoRecipe1Ingredients.add("2 lb. Brussels sprouts");
+        ketoRecipe1Ingredients.add("2 tbsp. extra-virgin olive oil");
+        ketoRecipe1Ingredients.add("2 cloves garlic, minced");
+        ketoRecipe1Ingredients.add("1 tsp. freshly chopped thyme");
+        ketoRecipe1Ingredients.add("Kosher salt");
+        ketoRecipe1Ingredients.add("Freshly ground black pepper");
+        ketoRecipe1Ingredients.add("1 c. shredded mozzarella");
+        ketoRecipe1Ingredients.add("1/4 c. freshly grated Parmesan");
+        ketoRecipe1Ingredients.add("Freshly chopped parsley, for garnish");
+
+        ketoRecipes1Steps.add("Preheat oven to 425° and line a large baking sheet with parchment paper. Prepare an ice bath in a large bowl.");
+        ketoRecipes1Steps.add("Blanch Brussels sprouts: Bring a large pot of salted water to a boil. Add Brussels sprouts and cook until bright green and very tender, 8 to 10 minutes. Add Brussels sprouts to ice bath to cool then drain.");
+            ketoRecipes1Steps.add("On a large baking sheet, toss blanched Brussels sprouts with oil, garlic, and thyme. Using the end of a small glass or mason jar, press down on Brussels sprouts to smash them into a flat patty. Season each smashed Brussels sprout with salt and pepper, then sprinkle mozzarella and Parmesan on top.");
+            ketoRecipes1Steps.add("Bake until bottoms of sprouts are crispy and cheese is melty and golden, 20 to 25 minutes.");
+            ketoRecipes1Steps.add("Garnish with parsley and serve warm.");
+
+        Keto ketoRepoketoRecipe1 = new Keto(25, "medium", ketoRecipe1Ingredients, 4, 25,
+                180, 4, 10, 4, 376, 15, "dinner",
+                ketoRecipes1Steps, "insert image url here");
+ketoRepo.save(ketoRepoketoRecipe1);
     }
 }
