@@ -1,8 +1,6 @@
 package io.codelaborators.serverside.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -13,6 +11,7 @@ public class Recipe {
 
     private int prepTime;
     private String difficultyLevel;
+    @ElementCollection
     private List<String> ingredients;
     private int servingSize;
     private int cookTime;
@@ -22,6 +21,8 @@ public class Recipe {
     private int sugar;
     private int sodium;
     private int carbs;
+    @ElementCollection
+    @Lob
     private List<String> steps;
     private String mealType;
 
