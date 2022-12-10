@@ -23,8 +23,7 @@ private GlutenFreeRepository glutenFreeRepo;
 
 
 
-@Resource
-private DairyFreeRepository dairyFreeRepo;
+
 
 @Resource
 private PaleoRepository paleoRepo;
@@ -141,22 +140,8 @@ private PaleoRepository paleoRepo;
         dairyFreeRecipe1Steps.add("Pour the egg mixture over the casserole.");
         dairyFreeRecipe1Steps.add("Bake for 35-40 minutes or until the eggs are cooked through. Serve immediately.");
 
-        DairyFree dairyFreeRecipe1 = new DairyFree(20, "easy", dairyFreeRecipe1Ingredients, 8, 40, 318, 19, 20, 2, 457, 16, "breakfast", dairyFreeRecipe1Steps, "insert image url here");
+        DairyFree dairyFreeRecipe1 = new DairyFree("Egg casserole", 20, "easy", dairyFreeRecipe1Ingredients, 8, 40, 318, 19, 20, 2, 457, 16, "breakfast", dairyFreeRecipe1Steps, "insert image url here");
 
-        dairyFreeRecipe1Steps.add("Preheat oven to 400 degrees");
-        dairyFreeRecipe1Steps.add("Spray baking pan with nonstick cooking spray");
-        dairyFreeRecipe1Steps.add("Brown the sausage with the onions and garlic");
-        dairyFreeRecipe1Steps.add("Once cooked, add the spinach, stirring occasionally til it wilts");
-        dairyFreeRecipe1Steps.add("In large bowl, whisk together eggs, soy milk, dry mustard, salt and pepper");
-        dairyFreeRecipe1Steps.add("Add the hashbrowns to prepared pan");
-        dairyFreeRecipe1Steps.add("Spread the pork sausage mixture on top of the potatoes");
-        dairyFreeRecipe1Steps.add("Pour the egg mixture over the casserole");
-        dairyFreeRecipe1Steps.add("Bake for 35-40 minutes or until the eggs are cooked through. Serve immediately");
-
-
-     
-
-        DairyFree dairyFreeRecipe1 = new DairyFree("dairyFreeRecipe1",10,"easy",dairyFreeRecipe1Ingredients,8,40,318,19,20,1,457,16,"breakfast",dairyFreeRecipe1Steps,"insert image url here");
 
 
         dairyFreeRepo.save(dairyFreeRecipe1);
@@ -182,7 +167,7 @@ private PaleoRepository paleoRepo;
         dairyFreeRecipe2Steps.add("Sprinkle with the cheese and lemon pepper.");
         dairyFreeRecipe2Steps.add("Drizzle with vinaigrette on top.");
 
-        DairyFree dairyFreeRecipe2 = new DairyFree(15, "easy", dairyFreeRecipe2Ingredients, 1, 0, 351, 10, 44, 5, 671, 20, "lunch", dairyFreeRecipe2Steps, "insert image url here");
+        DairyFree dairyFreeRecipe2 = new DairyFree("Chicken salad", 15, "easy", dairyFreeRecipe2Ingredients, 1, 0, 351, 10, 44, 5, 671, 20, "lunch", dairyFreeRecipe2Steps, "insert image url here");
         dairyFreeRepo.save(dairyFreeRecipe2);
 
         List<String> paleoSesameChickenIngredients = new ArrayList<>();
@@ -245,7 +230,7 @@ private PaleoRepository paleoRepo;
         paleoCreamyTuscanChickenSteps.add("Whisk in the tapioca or arrowroot, the add the broth and coconut milk. Stir to combine, then stir in the mustard, yeast, Italian seasoning, sea salt and pepper. Cook and stir over medium-high heat until it starts to thicken.");
         paleoCreamyTuscanChickenSteps.add("Add the spinach and sun-dried tomatoes and allow mixture to simmer until spinach is wilted and tomatoes are softened. Add chicken back to the skillet and simmer another 2 minutes. Serve over cauli rice, zucchini noodles, or with roasted potatoes. Enjoy!");
 
-        Paleo paleoCreamyTuscanChickenRecipe = new Paleo("paleoCreamyTuscanChickenRecipe", 10, "medium", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "insert image url here");
+        Paleo paleoCreamyTuscanChickenRecipe = new Paleo("paleoCreamyTuscanChickenRecipe", 10, "hard", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "insert image url here");
         paleoRepo.save(paleoCreamyTuscanChickenRecipe);
 
         List<String> paleoSweetPotatoPancakesIngredients = new ArrayList<>();
@@ -289,7 +274,7 @@ private PaleoRepository paleoRepo;
         dairyFreeRecipe3Steps.add("In a small bowl, whisk together the mayonnaise, lemon juice, mustard, and garlic until smooth.");
         dairyFreeRecipe3Steps.add("Divide the salmon and asparagus between two plates and drizzle each serving with half of the mayonnaise sauce.");
 
-        DairyFree dairyFreeRecipe3 = new DairyFree(5, "medium", dairyFreeRecipe3Ingredients, 2, 15, 384, 27, 27, 4, 533, 10, "dinner", dairyFreeRecipe3Steps, "insert image url here");
+        DairyFree dairyFreeRecipe3 = new DairyFree("Sheetpan Salmon", 5, "medium", dairyFreeRecipe3Ingredients, 2, 15, 384, 27, 27, 4, 533, 10, "dinner", dairyFreeRecipe3Steps, "insert image url here");
         dairyFreeRepo.save(dairyFreeRecipe3);
 
 

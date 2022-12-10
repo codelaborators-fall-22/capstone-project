@@ -33,7 +33,7 @@ public class DairyFreeController {
 
 
 
-    @GetMapping("/recipes/dairy-free/{mealType}")
+    @GetMapping("/recipes/dairy-free/meal/{mealType}")
     public Collection<DairyFree> getDairyFreeRecipesByMealType(@PathVariable String mealType) {
         return (Collection<DairyFree>) dairyFreeRepo.findByMealType(mealType.toLowerCase()); }
 
