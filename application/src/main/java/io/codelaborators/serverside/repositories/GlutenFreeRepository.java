@@ -9,5 +9,10 @@ import java.util.Collection;
 import java.util.List;
 
 public interface GlutenFreeRepository extends CrudRepository<GlutenFree, Long> {
+
+
+    List<GlutenFree> findByDifficultyLevel(String difficultyLevel);
+
     List<GlutenFree> findByMealType(String mealType);
+
 }

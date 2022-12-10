@@ -27,4 +27,8 @@ public class RecipeController {
     public  Collection<Recipe> getRecipesByMealType(@PathVariable String mealType) {
         return (Collection<Recipe>) recipeRepo.findByMealType(mealType.toLowerCase()); }
 
+    @GetMapping("/recipes/{difficultyLevel}")
+    public  Collection<Recipe> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {
+        return (Collection<Recipe>) recipeRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
+
 }

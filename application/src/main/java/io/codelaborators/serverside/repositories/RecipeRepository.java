@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface RecipeRepository extends CrudRepository<Recipe, Long> {
     List<Recipe> findByMealType(String mealType);
+
+    List<Recipe> findByDifficultyLevel(String difficultyLevel);
 }

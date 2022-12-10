@@ -26,7 +26,15 @@ public class DairyFreeController {
         return (Collection<DairyFree>) dairyFreeRepo.findAll();
     }
 
+
+    @GetMapping ("/recipes/dairy-free/{difficultyLevel}")
+    public Collection<DairyFree> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {
+        return (Collection<DairyFree>) dairyFreeRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
+
+
+
     @GetMapping("/recipes/dairy-free/{mealType}")
     public Collection<DairyFree> getDairyFreeRecipesByMealType(@PathVariable String mealType) {
         return (Collection<DairyFree>) dairyFreeRepo.findByMealType(mealType.toLowerCase()); }
+
 }

@@ -7,5 +7,9 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface KetoRepository extends CrudRepository<Keto, Long> {
+
+    List<Keto> findByDifficultyLevel(String difficultyLevel);
+
     List<Keto> findByMealType(String mealType);
+
 }

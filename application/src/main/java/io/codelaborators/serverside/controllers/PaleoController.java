@@ -25,6 +25,9 @@ public class PaleoController {
 
         return (Collection<Paleo>) paleoRepo.findAll();
     }
+    @GetMapping("/recipes/paleo/{difficultyLevel}")
+    public Collection<Paleo> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {
+        return (Collection<Paleo>) paleoRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
 
     @GetMapping("/recipes/paleo/{mealType}")
     public Collection<Paleo> getPaleoRecipesByMealType(@PathVariable String mealType) {

@@ -1,6 +1,7 @@
 package io.codelaborators.serverside.controllers;
 
 import io.codelaborators.serverside.models.GlutenFree;
+import io.codelaborators.serverside.models.Paleo;
 import io.codelaborators.serverside.repositories.GlutenFreeRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,14 @@ public class GlutenFreeController {
         public Collection<GlutenFree> getAllGlutenFreeRecipes(){
         return (Collection<GlutenFree>) glutenFreeRepo.findAll();
     }
+
+
+    @GetMapping("/recipes/gluten-free/{difficultyLevel}")
+    public Collection<GlutenFree> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {
+        return (Collection<GlutenFree>) glutenFreeRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
+
     @GetMapping("/recipes/gluten-free/{mealType}")
     public Collection<GlutenFree> getGlutenFreeRecipesByMealType(@PathVariable String mealType) {
         return (Collection<GlutenFree>) glutenFreeRepo.findByMealType(mealType.toLowerCase()); }
+
 }
