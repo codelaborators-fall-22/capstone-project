@@ -23,7 +23,13 @@ public class GlutenFreeController {
         return (Collection<GlutenFree>) glutenFreeRepo.findAll();
     }
 
+
     @GetMapping("/recipes/gluten-free/{difficultyLevel}")
     public Collection<GlutenFree> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {
         return (Collection<GlutenFree>) glutenFreeRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
+
+    @GetMapping("/recipes/gluten-free/{mealType}")
+    public Collection<GlutenFree> getGlutenFreeRecipesByMealType(@PathVariable String mealType) {
+        return (Collection<GlutenFree>) glutenFreeRepo.findByMealType(mealType.toLowerCase()); }
+
 }

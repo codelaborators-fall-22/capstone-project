@@ -16,6 +16,8 @@ public class Initializer implements CommandLineRunner {
 @Resource
 
 private GlutenFreeRepository glutenFreeRepo;
+
+
 @Resource
 private DairyFreeRepository dairyFreeRepo;
 
@@ -46,8 +48,12 @@ private PaleoRepository paleoRepo;
         glutenFreeRecipe1steps.add("Once mixture has reached ideal consistency, remove from heat and add butter.");
         glutenFreeRecipe1steps.add("Allow to cool for 5 minutes and enjoy!");
 
+
+        
+
         GlutenFree glutenFreeRecipe1 = new GlutenFree("glutenFreeRecipe1",5,"easy", glutenFreeRecipe1ingredients,
                 2, 10, 300,20,5,10,50,75,"Breakfast",
+
                 glutenFreeRecipe1steps, "insert image url here");
 
         glutenFreeRepo.save(glutenFreeRecipe1);
@@ -67,13 +73,41 @@ private PaleoRepository paleoRepo;
         glutenFreeRecipe2steps.add("start at the end of the tortilla and roll it until tightly packed.");
         glutenFreeRecipe2steps.add("Cut tortilla in 2 halves and enjoy!");
 
+
+        
+
         GlutenFree glutenFreeRecipe2 = new GlutenFree("glutenFreeRecipe2",5,"easy", glutenFreeRecipe2ingredients,
                 1, 1, 250,7,35,10,20,40,"Lunch",
+
                 glutenFreeRecipe2steps, "insert image url here");
 
         glutenFreeRepo.save(glutenFreeRecipe2);
 
+        List<String> glutenFreeRecipe3steps = new ArrayList<>();
+        List<String> glutenFreeRecipe3ingredients = new ArrayList<>();
 
+        glutenFreeRecipe3ingredients.add("2 tablespoons of grassfed butter");
+        glutenFreeRecipe3ingredients.add(" 3 cloves minced fresh garlic");
+        glutenFreeRecipe3ingredients.add("1 teaspoon chopped fresh thyme");
+        glutenFreeRecipe3ingredients.add("salt and black pepper");
+        glutenFreeRecipe3ingredients.add(" 5 lamb loin chops");
+
+        glutenFreeRecipe3ingredients.add("Heat a dry cast iron skillet over a medium high heat, " +
+                "Then, place the chops narrow fat side");
+        glutenFreeRecipe3ingredients.add("Using tongs press the chops down so that the fat " +
+                "renders and turns crisp and brown");
+        glutenFreeRecipe3ingredients.add("Once the fat has melted into the pan, lay the chops " +
+                "flat on one of their sides. Cook them until browned, then turn and cook on the other side");
+        glutenFreeRecipe3ingredients.add("Add 2 tablespoons of butter, garlic and thyme");
+        glutenFreeRecipe3ingredients.add("Stir well until the butter is foaming, " +
+                "and spoon the butter over the lamb for a minute");
+
+
+        GlutenFree glutenFreeRecipe3 = new GlutenFree("Garlic Butter Lamb Chops",5, "medium", glutenFreeRecipe3ingredients,
+                3, 15, 260, 20, 20, 0, 11, 20, "Dinner",
+                glutenFreeRecipe3steps, "insert image url here");
+
+        glutenFreeRepo.save(glutenFreeRecipe3);
 
 
         List<String> dairyFreeRecipe1Ingredients = new ArrayList<>();
@@ -100,7 +134,11 @@ private PaleoRepository paleoRepo;
         dairyFreeRecipe1Steps.add("Pour the egg mixture over the casserole");
         dairyFreeRecipe1Steps.add("Bake for 35-40 minutes or until the eggs are cooked through. Serve immediately");
 
+
+     
+
         DairyFree dairyFreeRecipe1 = new DairyFree("dairyFreeRecipe1",10,"easy",dairyFreeRecipe1Ingredients,8,40,318,19,20,1,457,16,"breakfast",dairyFreeRecipe1Steps,"insert image url here");
+
         dairyFreeRepo.save(dairyFreeRecipe1);
 
 
