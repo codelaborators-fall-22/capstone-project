@@ -12,20 +12,109 @@ import java.util.List;
 @Component
 public class Initializer implements CommandLineRunner {
 
-<<<<<<< HEAD
+
     @Resource
     private DairyFreeRepository dairyFreeRepo;
-=======
+
+
+@Resource
+
+private GlutenFreeRepository glutenFreeRepo;
+
+
+
 @Resource
 private DairyFreeRepository dairyFreeRepo;
 
 @Resource
 private PaleoRepository paleoRepo;
->>>>>>> c1a25aabc3c6b7e36539e66fdd4916842cab9bee
+
+
+    @Resource
+    private KetoRepository ketoRepo;
+
+
+
 
 
     @Override
     public void run(String... args) throws Exception {
+
+
+
+        List<String> glutenFreeRecipe1steps = new ArrayList<>();
+        List<String> glutenFreeRecipe1ingredients = new ArrayList<>();
+
+        glutenFreeRecipe1ingredients.add("2 cups of water");
+        glutenFreeRecipe1ingredients.add("1 cup of dry grits");
+
+        glutenFreeRecipe1steps.add("Bring 2 cups of water to a boil in a sauce pan.");
+        glutenFreeRecipe1steps.add("After water has began to boil, add 1 cup of dry grits to the sauce pan.");
+        glutenFreeRecipe1steps.add("Stir mixture every 2 minutes for 10 minutes.");
+        glutenFreeRecipe1steps.add("Once mixture has reached ideal consistency, remove from heat and add butter.");
+        glutenFreeRecipe1steps.add("Allow to cool for 5 minutes and enjoy!");
+
+
+        
+
+        GlutenFree glutenFreeRecipe1 = new GlutenFree("glutenFreeRecipe1",5,"easy", glutenFreeRecipe1ingredients,
+                2, 10, 300,20,5,10,50,75,"Breakfast",
+
+                glutenFreeRecipe1steps, "insert image url here");
+
+        glutenFreeRepo.save(glutenFreeRecipe1);
+
+
+        List<String> glutenFreeRecipe2steps = new ArrayList<>();
+        List<String> glutenFreeRecipe2ingredients = new ArrayList<>();
+
+        glutenFreeRecipe2ingredients.add("Corn tortillas");
+        glutenFreeRecipe2ingredients.add("5 oz. of sliced turkey");
+        glutenFreeRecipe2ingredients.add("Chopped lettuce, 1 tomato, 1 serving of mayonnaise");
+        glutenFreeRecipe2ingredients.add("3 oz of baby carrots");
+
+        glutenFreeRecipe2steps.add(" Warm corn tortillas in the microwave for 1 minute.");
+        glutenFreeRecipe2steps.add("Now spread a thin layer of mayo on the tortilla.");
+        glutenFreeRecipe2steps.add("Now layer your lettuce, tomato, sliced turkey.");
+        glutenFreeRecipe2steps.add("start at the end of the tortilla and roll it until tightly packed.");
+        glutenFreeRecipe2steps.add("Cut tortilla in 2 halves and enjoy!");
+
+
+        
+
+        GlutenFree glutenFreeRecipe2 = new GlutenFree("glutenFreeRecipe2",5,"easy", glutenFreeRecipe2ingredients,
+                1, 1, 250,7,35,10,20,40,"Lunch",
+
+                glutenFreeRecipe2steps, "insert image url here");
+
+        glutenFreeRepo.save(glutenFreeRecipe2);
+
+        List<String> glutenFreeRecipe3steps = new ArrayList<>();
+        List<String> glutenFreeRecipe3ingredients = new ArrayList<>();
+
+        glutenFreeRecipe3ingredients.add("2 tablespoons of grassfed butter");
+        glutenFreeRecipe3ingredients.add(" 3 cloves minced fresh garlic");
+        glutenFreeRecipe3ingredients.add("1 teaspoon chopped fresh thyme");
+        glutenFreeRecipe3ingredients.add("salt and black pepper");
+        glutenFreeRecipe3ingredients.add(" 5 lamb loin chops");
+
+        glutenFreeRecipe3ingredients.add("Heat a dry cast iron skillet over a medium high heat, " +
+                "Then, place the chops narrow fat side");
+        glutenFreeRecipe3ingredients.add("Using tongs press the chops down so that the fat " +
+                "renders and turns crisp and brown");
+        glutenFreeRecipe3ingredients.add("Once the fat has melted into the pan, lay the chops " +
+                "flat on one of their sides. Cook them until browned, then turn and cook on the other side");
+        glutenFreeRecipe3ingredients.add("Add 2 tablespoons of butter, garlic and thyme");
+        glutenFreeRecipe3ingredients.add("Stir well until the butter is foaming, " +
+                "and spoon the butter over the lamb for a minute");
+
+
+        GlutenFree glutenFreeRecipe3 = new GlutenFree("Garlic Butter Lamb Chops",5, "medium", glutenFreeRecipe3ingredients,
+                3, 15, 260, 20, 20, 0, 11, 20, "Dinner",
+                glutenFreeRecipe3steps, "insert image url here");
+
+        glutenFreeRepo.save(glutenFreeRecipe3);
+
 
         List<String> dairyFreeRecipe1Ingredients = new ArrayList<>();
         List<String> dairyFreeRecipe1Steps = new ArrayList<>();
@@ -41,6 +130,7 @@ private PaleoRepository paleoRepo;
         dairyFreeRecipe1Ingredients.add("1 teaspoon salt");
         dairyFreeRecipe1Ingredients.add("1/2 teaspoon pepper");
 
+
         dairyFreeRecipe1Steps.add("Preheat oven to 400 degrees F.");
         dairyFreeRecipe1Steps.add("Spray baking pan with nonstick cooking spray.");
         dairyFreeRecipe1Steps.add("Brown the sausage with the onions and garlic.");
@@ -52,13 +142,27 @@ private PaleoRepository paleoRepo;
         dairyFreeRecipe1Steps.add("Bake for 35-40 minutes or until the eggs are cooked through. Serve immediately.");
 
         DairyFree dairyFreeRecipe1 = new DairyFree(20, "easy", dairyFreeRecipe1Ingredients, 8, 40, 318, 19, 20, 2, 457, 16, "breakfast", dairyFreeRecipe1Steps, "insert image url here");
+
+        dairyFreeRecipe1Steps.add("Preheat oven to 400 degrees");
+        dairyFreeRecipe1Steps.add("Spray baking pan with nonstick cooking spray");
+        dairyFreeRecipe1Steps.add("Brown the sausage with the onions and garlic");
+        dairyFreeRecipe1Steps.add("Once cooked, add the spinach, stirring occasionally til it wilts");
+        dairyFreeRecipe1Steps.add("In large bowl, whisk together eggs, soy milk, dry mustard, salt and pepper");
+        dairyFreeRecipe1Steps.add("Add the hashbrowns to prepared pan");
+        dairyFreeRecipe1Steps.add("Spread the pork sausage mixture on top of the potatoes");
+        dairyFreeRecipe1Steps.add("Pour the egg mixture over the casserole");
+        dairyFreeRecipe1Steps.add("Bake for 35-40 minutes or until the eggs are cooked through. Serve immediately");
+
+
+     
+
+        DairyFree dairyFreeRecipe1 = new DairyFree("dairyFreeRecipe1",10,"easy",dairyFreeRecipe1Ingredients,8,40,318,19,20,1,457,16,"breakfast",dairyFreeRecipe1Steps,"insert image url here");
+
+
         dairyFreeRepo.save(dairyFreeRecipe1);
-    }
+   
 
-    @Override
-    public void run(String... args) throws Exception {
 
-<<<<<<< HEAD
         List<String> dairyFreeRecipe2Ingredients = new ArrayList<>();
         List<String> dairyFreeRecipe2Steps = new ArrayList<>();
 
@@ -80,7 +184,7 @@ private PaleoRepository paleoRepo;
 
         DairyFree dairyFreeRecipe2 = new DairyFree(15, "easy", dairyFreeRecipe2Ingredients, 1, 0, 351, 10, 44, 5, 671, 20, "lunch", dairyFreeRecipe2Steps, "insert image url here");
         dairyFreeRepo.save(dairyFreeRecipe2);
-=======
+
         List<String> paleoSesameChickenIngredients = new ArrayList<>();
         List<String> paleoSesameChickenSteps = new ArrayList<>();
 
@@ -112,7 +216,7 @@ private PaleoRepository paleoRepo;
         paleoSesameChickenSteps.add("Place chicken on a paper-towel-lined plate and repeat the process for the remaining chicken, adjusting the temperature of the heat as needed and adding more oil if needed.");
         paleoSesameChickenSteps.add("Gently reheat the sesame sauce and toss it with the chicken. To serve, sprinkle all over with sesame seeds and green onion and and serve over sautéed cauliflower rice or your favorite veggies. Enjoy!");
 
-        Paleo paleoSesameChickenRecipe = new Paleo(15, "medium", paleoSesameChickenIngredients, 6, 20, 382, 12, 32, 13, 869, 37, "dinner", paleoSesameChickenSteps, "insert image url here");
+        Paleo paleoSesameChickenRecipe = new Paleo("paleoSesameChickenRecipe", 15, "medium", paleoSesameChickenIngredients, 6, 20, 382, 12, 32, 13, 869, 37, "dinner", paleoSesameChickenSteps, "insert image url here");
         paleoRepo.save(paleoSesameChickenRecipe);
 
         List<String> paleoCreamyTuscanChickenIngredients = new ArrayList<>();
@@ -141,7 +245,7 @@ private PaleoRepository paleoRepo;
         paleoCreamyTuscanChickenSteps.add("Whisk in the tapioca or arrowroot, the add the broth and coconut milk. Stir to combine, then stir in the mustard, yeast, Italian seasoning, sea salt and pepper. Cook and stir over medium-high heat until it starts to thicken.");
         paleoCreamyTuscanChickenSteps.add("Add the spinach and sun-dried tomatoes and allow mixture to simmer until spinach is wilted and tomatoes are softened. Add chicken back to the skillet and simmer another 2 minutes. Serve over cauli rice, zucchini noodles, or with roasted potatoes. Enjoy!");
 
-        Paleo paleoCreamyTuscanChickenRecipe = new Paleo(10, "medium", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "insert image url here");
+        Paleo paleoCreamyTuscanChickenRecipe = new Paleo("paleoCreamyTuscanChickenRecipe", 10, "medium", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "insert image url here");
         paleoRepo.save(paleoCreamyTuscanChickenRecipe);
 
         List<String> paleoSweetPotatoPancakesIngredients = new ArrayList<>();
@@ -159,14 +263,11 @@ private PaleoRepository paleoRepo;
         paleoSweetPotatoPancakesSteps.add("Heat coconut oil in a skillet over medium heat. Pour about 1/4 cup of batter out and cook until bubbles start to form. Flip the pancake and cook for about another minute or two until fully cooked.");
         paleoSweetPotatoPancakesSteps.add("Repeat with the rest of the batter. Enjoy!");
 
-        Paleo paleoSweetPotatoPancakesRecipe = new Paleo(0, "easy", paleoSweetPotatoPancakesIngredients, 4, 15, 110, 7, 4, 3, 126, 9, "breakfast", paleoSweetPotatoPancakesSteps, "insert image url here");
+        Paleo paleoSweetPotatoPancakesRecipe = new Paleo("paleoSweetPotatoPancakesRecipe", 0, "easy", paleoSweetPotatoPancakesIngredients, 4, 15, 110, 7, 4, 3, 126, 9, "breakfast", paleoSweetPotatoPancakesSteps, "insert image url here");
         paleoRepo.save(paleoSweetPotatoPancakesRecipe);
->>>>>>> c1a25aabc3c6b7e36539e66fdd4916842cab9bee
 
-    }
 
-    @Override
-    public void run(String... args) throws Exception {
+   
 
         List<String> dairyFreeRecipe3Ingredients = new ArrayList<>();
         List<String> dairyFreeRecipe3Steps = new ArrayList<>();
@@ -191,5 +292,30 @@ private PaleoRepository paleoRepo;
         DairyFree dairyFreeRecipe3 = new DairyFree(5, "medium", dairyFreeRecipe3Ingredients, 2, 15, 384, 27, 27, 4, 533, 10, "dinner", dairyFreeRecipe3Steps, "insert image url here");
         dairyFreeRepo.save(dairyFreeRecipe3);
 
+
+
+        List<String> ketoRecipe1Ingredients = new ArrayList<>();
+        List<String> ketoRecipes1Steps = new ArrayList<>();
+
+        ketoRecipe1Ingredients.add("2 lb. Brussels sprouts");
+        ketoRecipe1Ingredients.add("2 tbsp. extra-virgin olive oil");
+        ketoRecipe1Ingredients.add("2 cloves garlic, minced");
+        ketoRecipe1Ingredients.add("1 tsp. freshly chopped thyme");
+        ketoRecipe1Ingredients.add("Kosher salt");
+        ketoRecipe1Ingredients.add("Freshly ground black pepper");
+        ketoRecipe1Ingredients.add("1 c. shredded mozzarella");
+        ketoRecipe1Ingredients.add("1/4 c. freshly grated Parmesan");
+        ketoRecipe1Ingredients.add("Freshly chopped parsley, for garnish");
+
+        ketoRecipes1Steps.add("Preheat oven to 425° and line a large baking sheet with parchment paper. Prepare an ice bath in a large bowl.");
+        ketoRecipes1Steps.add("Blanch Brussels sprouts: Bring a large pot of salted water to a boil. Add Brussels sprouts and cook until bright green and very tender, 8 to 10 minutes. Add Brussels sprouts to ice bath to cool then drain.");
+            ketoRecipes1Steps.add("On a large baking sheet, toss blanched Brussels sprouts with oil, garlic, and thyme. Using the end of a small glass or mason jar, press down on Brussels sprouts to smash them into a flat patty. Season each smashed Brussels sprout with salt and pepper, then sprinkle mozzarella and Parmesan on top.");
+            ketoRecipes1Steps.add("Bake until bottoms of sprouts are crispy and cheese is melty and golden, 20 to 25 minutes.");
+            ketoRecipes1Steps.add("Garnish with parsley and serve warm.");
+
+        Keto ketoRepoketoRecipe1 = new Keto("ketoRecipe1",25, "medium", ketoRecipe1Ingredients, 4, 25,
+                180, 4, 10, 4, 376, 15, "dinner",
+                ketoRecipes1Steps, "insert image url here");
+ketoRepo.save(ketoRepoketoRecipe1);
     }
 }
