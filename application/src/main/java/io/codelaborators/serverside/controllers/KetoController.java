@@ -26,18 +26,20 @@ public class KetoController {
     private KetoRepository ketoRepo;
 
     @GetMapping("/recipes/keto")
-    public Collection<Keto  > getAllKetoRecipes() {
+    public Collection<Keto> getAllKetoRecipes() {
         return (Collection<Keto>) ketoRepo.findAll();
     }
 
 
-    @GetMapping ("/recipes/keto/{difficultyLevel}")
+    @GetMapping("/recipes/keto/{difficultyLevel}")
     public Collection<Keto> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {
-        return (Collection<Keto>) ketoRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
+        return (Collection<Keto>) ketoRepo.findByDifficultyLevel(difficultyLevel.toLowerCase());
     }
 
-    @GetMapping("/recipes/keto/{mealType}")
-    public Collection<Keto> getKetoRecipesByMealType(@PathVariable String mealType) {
-        return (Collection<Keto>) ketoRepo.findByMealType(mealType.toLowerCase()); }
 
+    @GetMapping("/recipes/keto/meal/{mealType}")
+    public Collection<Keto> getKetoRecipesByMealType(@PathVariable String mealType) {
+        return (Collection<Keto>) ketoRepo.findByMealType(mealType.toLowerCase());
+    }
+}
 

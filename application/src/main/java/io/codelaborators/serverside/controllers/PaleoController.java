@@ -29,7 +29,7 @@ public class PaleoController {
     public Collection<Paleo> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {
         return (Collection<Paleo>) paleoRepo.findByDifficultyLevel(difficultyLevel.toLowerCase()); }
 
-    @GetMapping("/recipes/paleo/{mealType}")
+    @GetMapping("/recipes/paleo/meal/{mealType}")
     public Collection<Paleo> getPaleoRecipesByMealType(@PathVariable String mealType) {
         return (Collection<Paleo>) paleoRepo.findByMealType(mealType.toLowerCase()); }
 

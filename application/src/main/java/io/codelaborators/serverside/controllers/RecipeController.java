@@ -23,7 +23,7 @@ public class RecipeController {
         return (Collection<Recipe>) recipeRepo.findAll();
     }
 
-    @GetMapping("/recipes/{mealType}")
+    @GetMapping("/recipes/meal/{mealType}")
     public  Collection<Recipe> getRecipesByMealType(@PathVariable String mealType) {
         return (Collection<Recipe>) recipeRepo.findByMealType(mealType.toLowerCase()); }
 
