@@ -230,7 +230,7 @@ private PaleoRepository paleoRepo;
         paleoCreamyTuscanChickenSteps.add("Whisk in the tapioca or arrowroot, the add the broth and coconut milk. Stir to combine, then stir in the mustard, yeast, Italian seasoning, sea salt and pepper. Cook and stir over medium-high heat until it starts to thicken.");
         paleoCreamyTuscanChickenSteps.add("Add the spinach and sun-dried tomatoes and allow mixture to simmer until spinach is wilted and tomatoes are softened. Add chicken back to the skillet and simmer another 2 minutes. Serve over cauli rice, zucchini noodles, or with roasted potatoes. Enjoy!");
 
-        Paleo paleoCreamyTuscanChickenRecipe = new Paleo("paleoCreamyTuscanChickenRecipe", 10, "medium", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "insert image url here");
+        Paleo paleoCreamyTuscanChickenRecipe = new Paleo("paleoCreamyTuscanChickenRecipe", 10, "hard", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "insert image url here");
         paleoRepo.save(paleoCreamyTuscanChickenRecipe);
 
         List<String> paleoSweetPotatoPancakesIngredients = new ArrayList<>();
