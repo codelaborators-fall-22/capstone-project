@@ -16,6 +16,7 @@ public class Initializer implements CommandLineRunner {
 
 private GlutenFreeRepository glutenFreeRepo;
 
+@Resource
 private DairyFreeRepository dairyFreeRepo;
 
 @Resource

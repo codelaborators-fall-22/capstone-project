@@ -21,7 +21,7 @@ public class DairyFreeController {
     private DairyFreeRepository dairyFreeRepo;
 
     @GetMapping ("/recipes/dairy-free")
-    public Collection<DairyFree> getAllPaleoRecipes(){
+    public Collection<DairyFree> getAllDairyFreeRecipes(){
 
         return (Collection<DairyFree>) dairyFreeRepo.findAll();
     }
