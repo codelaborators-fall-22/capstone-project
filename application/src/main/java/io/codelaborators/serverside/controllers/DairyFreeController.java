@@ -21,12 +21,12 @@ public class DairyFreeController {
     private DairyFreeRepository dairyFreeRepo;
 
     @GetMapping ("/recipes/dairy-free")
-    public Collection<DairyFree> getAllPaleoRecipes(){
+    public Collection<DairyFree> getAllDairyFreeRecipes(){
 
         return (Collection<DairyFree>) dairyFreeRepo.findAll();
     }
 
-    @GetMapping("/recipes/{mealType}")
+    @GetMapping("/recipes/dairy-free/{mealType}")
     public Collection<DairyFree> getDairyFreeRecipesByMealType(@PathVariable String mealType) {
         return (Collection<DairyFree>) dairyFreeRepo.findByMealType(mealType.toLowerCase()); }
 }

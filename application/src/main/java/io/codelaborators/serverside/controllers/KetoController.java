@@ -26,7 +26,7 @@ public class KetoController {
 
         return (Collection<Keto>) ketoRepo.findAll();
     }
-    @GetMapping("/recipes/{mealType}")
+    @GetMapping("/recipes/keto/{mealType}")
     public Collection<Keto> getKetoRecipesByMealType(@PathVariable String mealType) {
         return (Collection<Keto>) ketoRepo.findByMealType(mealType.toLowerCase()); }
 
