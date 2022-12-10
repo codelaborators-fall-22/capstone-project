@@ -26,7 +26,7 @@ public class PaleoController {
         return (Collection<Paleo>) paleoRepo.findAll();
     }
 
-    @GetMapping("/recipes/{mealType}")
+    @GetMapping("/recipes/paleo/{mealType}")
     public Collection<Paleo> getPaleoRecipesByMealType(@PathVariable String mealType) {
         return (Collection<Paleo>) paleoRepo.findByMealType(mealType.toLowerCase()); }
 
