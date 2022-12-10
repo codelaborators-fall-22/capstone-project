@@ -1,9 +1,12 @@
 package io.codelaborators.serverside.controllers;
 
+import io.codelaborators.serverside.models.DairyFree;
 import io.codelaborators.serverside.models.Keto;
+import io.codelaborators.serverside.models.Paleo;
 import io.codelaborators.serverside.repositories.KetoRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -23,6 +26,8 @@ public class KetoController {
 
         return (Collection<Keto>) ketoRepo.findAll();
     }
-
+    @GetMapping("/recipes/{mealType}")
+    public Collection<Keto> getKetoRecipesByMealType(@PathVariable String mealType) {
+        return (Collection<Keto>) ketoRepo.findByMealType(mealType.toLowerCase()); }
 
 }

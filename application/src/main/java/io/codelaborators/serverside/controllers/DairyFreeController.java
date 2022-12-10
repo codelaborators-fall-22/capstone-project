@@ -1,9 +1,11 @@
 package io.codelaborators.serverside.controllers;
 
 import io.codelaborators.serverside.models.DairyFree;
+import io.codelaborators.serverside.models.Keto;
 import io.codelaborators.serverside.repositories.DairyFreeRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -24,5 +26,7 @@ public class DairyFreeController {
         return (Collection<DairyFree>) dairyFreeRepo.findAll();
     }
 
-
+    @GetMapping("/recipes/{mealType}")
+    public Collection<DairyFree> getDairyFreeRecipesByMealType(@PathVariable String mealType) {
+        return (Collection<DairyFree>) dairyFreeRepo.findByMealType(mealType.toLowerCase()); }
 }
