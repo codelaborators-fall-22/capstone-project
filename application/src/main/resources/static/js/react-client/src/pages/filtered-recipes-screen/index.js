@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import Axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 const FilteredRecipesScreen = () => {
+const category = useParams();
+console.log(category.category);
+
+ //state variables: state is a moment of time for a variable in your application
+ const [recipesToDisplay, setRecipesToDisplay] = useState([]);
+
+ //a React tool that handles component lifecycle 
+ //Lifecycle consists of mounting, display and calls to the API
+ useEffect(() => {
+
+     const fetchData = async () => {
+         const result = await Axios(`http://localhost:8080/recipes/${category.category}`);
+          console.log(result);
+      }
+
+      fetchData();
+
+  }, []);
+
+
+
+
   return (
     <div>
-      <table>
-        <button class="recipeScreenRecipeCategoryBtn">Dairy Free</button>
-        <button class="recipeScreenRecipeCategoryBtn">Gluten Free</button>
-        <button class="recipeScreenRecipeCategoryBtn">Keto</button>
-        <button class="recipeScreenRecipeCategoryBtn">Mediterranean</button>
-        <button class="recipeScreenRecipeCategoryBtn">Paleo</button>
-      </table>
+     
     </div>
   );
 }
