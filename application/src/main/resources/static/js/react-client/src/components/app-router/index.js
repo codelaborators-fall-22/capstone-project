@@ -14,7 +14,7 @@ const AppRouter = () => {
             <Route exact path={'/contact'} component={ContactScreen} />
             <Route exact path={'/about-us'} component={AboutUsScreen} />
             <Route exact path={'/recipes'} component={RecipesScreen} />
-            <Route exact path={'/filtered-recipes'} component={FilteredRecipesScreen} />
+            <Route exact path={'/recipes/:category'} component={FilteredRecipesScreen} />
         </Switch>
     )
 }
