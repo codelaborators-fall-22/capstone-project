@@ -2,32 +2,35 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    width: 65;
-    background-color: rgb(69, 61, 181);
+    background-color: #52796f;
+    height: 80px;
 
 }
 
 .nav {
     display: flex;
-    
-    
+
+
+
 
 
     & a {
-        background-color: rgb(130, 244, 198);
+        background-color: #162d3c;
         align-items: center;
-        border: 2px solid black;
+        border: 2px solid white;
         border-radius: 10px;
         display: flex;
         justify-content: center;
-        list-style-type: none;
-        margin: 10px;
+        color: white;
         min-width: 80px;
+        margin: 10px;
         padding: 15px;
+        font-weight: bolder;
+        font-size: larger;
+        list-style-type: none;
         text-decoration: none;
     }
 
 
 
 }
-
