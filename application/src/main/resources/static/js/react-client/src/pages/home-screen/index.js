@@ -1,6 +1,14 @@
 import React from 'react';
 
 import spoonsHeroImg from '../../assets/pexels-pixabay-357743.jpeg';
+import GlutenFreeBeef from '../../assets/beef-glutenfree.jpg';
+import DairyFreeImg from '../../assets/chopsticks-dairy-free.jpg';
+import KetoImg from '../../assets/pizza-keto.jpg';
+import PaleoImg from '../../assets/shrimp-paleo.jpg';
+import MediterraneanImg from '../../assets/tomato-mediterranean.jpg';
+import veganImg from '../../assets/veggies-vegan.jpg';
+
+
 import style from './style.module.scss';
 
 import { useHistory } from 'react-router-dom';
@@ -25,45 +33,45 @@ const HomeScreen = () => {
 
         <div className={style.recipeCategories}>
             <div className={style.categoryContainer}>
-              <img src="insert dairy free img here" alt="dairy free recipe image" className="dairyFreeImg"/>
+              <img src={DairyFreeImg} alt="dairy free image"/>
               <h4>Dairy Free Recipes</h4>
               <p>Dairy Free Description</p>
-              <button className="homeScreenRecipeCategoryBtn" onClick = { ()=>history.push("/recipes/dairy-free") }>Click here to see dairy-free recipes →</button>
+              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=>history.push("/recipes/dairy-free") }>See more →</button>
             </div>
        
             <div className={style.categoryContainer}>
-              <img src="gluten free" alt="gluten free recipe image" className="glutenFreeImg"/>
+              <img src={GlutenFreeBeef} alt="gluten free beef image" />
               <h4>Gluten Free Recipes</h4>
               <p>Gluten Free Description</p>
-              <button className="homeScreenRecipeCategoryBtn" onClick = { ()=>history.push("/recipes/gluten-free") }>Click here to see gluten-free recipes →</button>
+              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=>history.push("/recipes/gluten-free") }>See more →</button>
               </div>
   
             <div className={style.categoryContainer}>
-            <img src="insert keto img here" alt="keto recipe image" className="ketoImg"/>
+            <img src={KetoImg} alt="Keto Image"/>
               <h4>Keto Recipes</h4>
               <p>Keto Description</p>
-              <button className="homeScreenRecipeCategoryBtn" onClick = { ()=> history.push("/recipes/keto") }>Click here to see keto recipes →</button>
+              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=> history.push("/recipes/keto") }>See more →</button>
             </div>
       
             <div className={style.categoryContainer}>
-              <img src="insert mediterranean img here" alt="mediterranean recipe image" className="mediterraneanImg"/>
+              <img src={MediterraneanImg} alt="Mediterranean Image"/>
               <h4>Mediterranean Recipes</h4>
               <p>Mediterranean Description</p>
-              <button className="homeScreenRecipeCategoryBtn" onClick = { ()=> history.push("/recipes/mediterranean") }>Click here to see mediterranean recipes →</button>
+              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=> history.push("/recipes/mediterranean") }>See more →</button>
             </div>
         
             <div className={style.categoryContainer}>
-              <img src="insert paleo img here" alt="paleo recipe image" className="paleoImg"/>
+              <img src={PaleoImg} alt="Paleo Image"/>
               <h4>Paleo Recipes</h4>
               <p>Paleo Description</p>
-              <button className="homeScreenRecipeCategoryBtn" onClick = { ()=>history.push("/recipes/paleo") }>Click here to see paleo recipes →</button>
+              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=>history.push("/recipes/paleo") }>See more →</button>
             </div>
 
             <div className={style.categoryContainer}>
-              <img src="insert vegan img here" alt="vegan recipe image" className="veganImg"/>
+              <img src={veganImg} alt="vegan recipe image"/>
               <h4>Vegan Recipes</h4>
               <p>Vegan Description</p>
-              <button className={style.homeScreenRecipeCatBtn}>See more →</button>
+              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=> history.push("/recipes/vegan") }>See more →</button>
 
     
   
