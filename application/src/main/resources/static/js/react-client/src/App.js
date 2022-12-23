@@ -9,9 +9,11 @@ import Footer from './components/footer';
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+     
       <div className={style.page}>
-        <AppRouter />
+
+      <Header />
+      <AppRouter />
       </div>
       <Footer/>
     </BrowserRouter>
