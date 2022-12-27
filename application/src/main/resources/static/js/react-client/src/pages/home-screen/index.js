@@ -26,8 +26,8 @@ const HomeScreen = () => {
     <div>
         <div className={style.subheader}>
           <img src={spoonsHeroImg}  alt="spoons hero image"/>
-          <h2>Website Name</h2>
-          <h3>Description of website</h3>
+          <h2 className={style.h2}>RecipeMe</h2>
+          <h3 className={style.h3}>Dietary restrictions can be very challenging for some people, but with a little careful planning, you can make dietary restrictions work for you. Our recipes are designed to help people accomodate their needs.</h3>
         </div>
           
 

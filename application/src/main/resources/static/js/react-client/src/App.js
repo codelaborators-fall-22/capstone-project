@@ -9,10 +9,18 @@ import style from './style.module.scss';
 const App = () => {
   return (
     <BrowserRouter>
+
+     
+      <div className={style.page}>
+
+      <Header />
+      <AppRouter />
+
       <div className={style.page}>
         <Header />
         <AppRouter />
         <Footer />
+
       </div>
     </BrowserRouter>
   );
