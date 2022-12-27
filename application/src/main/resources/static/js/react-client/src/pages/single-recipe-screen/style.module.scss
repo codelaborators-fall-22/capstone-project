@@ -1,0 +1,9 @@
+.nameOfRecipe:hover {
+  color: white;
+  background-color: grey;
+  border-color: grey;
+  cursor: pointer;
+  transform: scale(1.0);
+  transition: all 0.5s;
+  max-width: auto;
+}
