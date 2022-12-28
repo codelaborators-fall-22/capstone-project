@@ -24,47 +24,38 @@ const AboutUsScreen = () => {
               <p>I have always been in love with organization, efficiency, and high-end design and truly feel I have found an industry I am passionate about and can be successful in. CodeLaborators bootcamp provided me with valuable skills to be able to bring my ideas to life in software development.</p>
               <p>A few of my goals after completing this bootcamp are to create my own software apps, collaborate on app production with colleagues, and join a development team to continue to advance my skillset. I hope you enjoy our website and find some tasty recipes!</p>
             </div>
-          </div>
+         
 
-          <div className={style.profileContaimer}>
             <div className={style.individualProfiles}>
               <img src="insert img 2 here" alt="profile image 2"/>
-              <h4>Name 2</h4>
+              <h4>Chris Lanier</h4>
               <p>Profile Details 2</p>
             </div>
-          </div>
 
-          <div className={style.profileContaimer}>
             <div className={style.individualProfiles}>
               <img src="insert img 3 here" alt="profile image 3"/>
-              <h4>Name 3</h4>
+              <h4>Gaylon </h4>
               <p>Profile Details 3</p>
             </div>
-          </div>
-
-          <div className={style.profileContaimer}>
+        
             <div className={style.individualProfiles}>
               <img src="insert img 4 here" alt="profile image 4"/>
-              <h4>Name 4</h4>
+              <h4>Mike</h4>
               <p>Profile Details 4</p>
             </div>
-          </div>
-
-          <div className={style.profileContaimer}>
+        
             <div className={style.individualProfiles}>
               <img src="insert img 5 here" alt="profile image 5"/>
-              <h4>Name 5</h4>
+              <h4>Muka</h4>
               <p>Profile Details 5</p>
             </div>
-          </div>
 
-          <div className={style.profileContaimer}>
             <div className={style.individualProfiles}>
               <img src="insert img 6 here" alt="profile image 6"/>
               <h4>Name 6</h4>
               <p>Profile Details 6</p>
             </div>
-          </div>
+        </div>
     </div>
   );
 }
