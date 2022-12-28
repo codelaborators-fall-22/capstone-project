@@ -24,62 +24,76 @@ const HomeScreen = () => {
 
   return (
     <div>
-        <div className={style.subheader}>
-          <img src={spoonsHeroImg}  alt="spoons hero image"/>
-          <h2>Website Name</h2>
-          <h3>Description of website</h3>
+      <div className={style.subheader}>
+        <img src={spoonsHeroImg} alt="spoons hero image" />
+        <h2>Website Name</h2>
+        <h3>Description of website</h3>
+      </div>
+
+
+      <div className={style.recipeCategories}>
+        <div className={style.categoryContainer}>
+          <img src={DairyFreeImg} alt="dairy free image" />
+          <h4>Dairy Free Recipes</h4>
+          <p>Dairy Free Description</p>
+          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/dairy-free")}>See more →</button>
         </div>
-          
 
-        <div className={style.recipeCategories}>
-            <div className={style.categoryContainer}>
-              <img src={DairyFreeImg} alt="dairy free image"/>
-              <h4>Dairy Free Recipes</h4>
-              <p>Dairy Free Description</p>
-              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=>history.push("/recipes/dairy-free") }>See more →</button>
-            </div>
-       
-            <div className={style.categoryContainer}>
-              <img src={GlutenFreeBeef} alt="gluten free beef image" />
-              <h4>Gluten Free Recipes</h4>
-              <p>Gluten Free Description</p>
-              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=>history.push("/recipes/gluten-free") }>See more →</button>
-              </div>
-  
-            <div className={style.categoryContainer}>
-            <img src={KetoImg} alt="Keto Image"/>
-              <h4>Keto Recipes</h4>
-              <p>Keto Description</p>
-              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=> history.push("/recipes/keto") }>See more →</button>
-            </div>
-      
-            <div className={style.categoryContainer}>
-              <img src={MediterraneanImg} alt="Mediterranean Image"/>
-              <h4>Mediterranean Recipes</h4>
-              <p>Mediterranean Description</p>
-              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=> history.push("/recipes/mediterranean") }>See more →</button>
-            </div>
-        
-            <div className={style.categoryContainer}>
-              <img src={PaleoImg} alt="Paleo Image"/>
-              <h4>Paleo Recipes</h4>
-              <p>Paleo Description</p>
-              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=>history.push("/recipes/paleo") }>See more →</button>
-            </div>
-
-            <div className={style.categoryContainer}>
-              <img src={veganImg} alt="vegan recipe image"/>
-              <h4>Vegan Recipes</h4>
-              <p>Vegan Description</p>
-              <button className={style.homeScreenRecipeCatBtn} onClick = { ()=> history.push("/recipes/vegan") }>See more →</button>
-
-    
-  
-    
-       
+        <div className={style.categoryContainer}>
+          <img src={GlutenFreeBeef} alt="gluten free beef image" />
+          <h4>Gluten Free Recipes</h4>
+          <p>Gluten Free Description</p>
+          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/gluten-free")}>See more →</button>
         </div>
-     </div>
-        
+
+        <div className={style.categoryContainer}>
+          <img src={KetoImg} alt="Keto Image" />
+          <h4>Keto Recipes</h4>
+          <p>Keto Description</p>
+          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/keto")}>See more →</button>
+        </div>
+
+        <div className={style.categoryContainer}>
+          <img src={MediterraneanImg} alt="Mediterranean Image" />
+          <h4>Mediterranean Recipes</h4>
+          <p>Mediterranean Description</p>
+          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/mediterranean")}>See more →</button>
+        </div>
+
+        <div className={style.categoryContainer}>
+          <img src={PaleoImg} alt="Paleo Image" />
+          <h4>Paleo Recipes</h4>
+          <p>Paleo Description</p>
+          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/paleo")}>See more →</button>
+        </div>
+
+        <div className={style.categoryContainer}>
+          <img src={veganImg} alt="vegan recipe image" />
+          <h4>Vegan Recipes</h4>
+          <p>Vegan Description</p>
+          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/vegan")}>See more →</button>
+
+
+
+
+
+        </div>
+      </div>
+
+
+      <h2>Meal Types</h2>
+      <button onClick={() => history.push("recipes/breakfast")}>Breakfast</button>
+      <button onClick={() => history.push("recipes/lunch")}>Lunch</button>
+      <button onClick={() => history.push("recipes/dinner")}>Dinner</button>
+
+      <h2>Difficulty Level</h2>
+      <button onClick={() => history.push("recipes/easy")}>Easy</button>
+      <button onClick={() => history.push("recipes/medium")}>Medium</button>
+      <button onClick={() => history.push("recipes/hard")}>Hard</button>
+
+
+
+
     </div>
   );
 }
