@@ -1,0 +1,58 @@
+.subheader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:black;
+    color: whitesmoke;
+    text-align: center;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    & img {
+        height: auto;
+        width: 100%;
+    
+    }
+}
+
+.subheader h3 {
+    font-size: 25px;
+}
+
+.subheader p {
+    font-size: 15px;
+}
+
+.profileContainer {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 10px
+   
+ }
+
+ .individualProfiles{
+    box-shadow: 6px 5px 7px 3px rgba(150, 166, 168, 0.5);
+    margin: auto;
+    margin-top: 10px;
+    height: 710px;
+    width: 510px;
+    padding: 20px;
+    justify-content: space-between 20px;
+    text-align: center;
+
+    & img {
+        height: 300px;
+        width: auto;
+      }
+}
+
+.individualProfiles h4 {
+    color: #52796f;
+    font-family: sans-serif;
+    font-size: 20px;
+    }
+
+.individualProfiles p {
+    color: #354f52;
+    font-family: sans-serif;
+    font-size: 15px;
+
+    }
