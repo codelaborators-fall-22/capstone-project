@@ -1,7 +1,5 @@
-
-
 .recipeCategories {
-    display: grid;
+   display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: 10px
  }
@@ -20,20 +18,55 @@
       width: auto;
     }
  }
+}
 
- .categoryContainer h4 {
-    color: #52796f;
-    font-family: sans-serif;
-    font-size: 20px;
- }
 
- .categoryContainer p {
-    color: #354f52;
-    font-family: sans-serif;
-    font-size: 15px;
+.categoryContainer h4 {
+   color: #52796f;
+   font-family: sans-serif;
+   font-size: 20px;
+}
 
+.categoryContainer p {
+   color: #354f52;
+   font-family: sans-serif;
+   font-size: 15px;
+
+
+}
+
+.homeScreenRecipeCatBtn {
+   background-color: #354f52;
+   border-radius: 8px;
+   color: aliceblue;
+   font-family: sans-serif;
+   font-size: 15px;
+}
+
+.subheader {
+   position: relative;
+
+
+   & img {
+      height: 80vh;
+      width: 100%;
+
+   }
+
+   & .h2 {
+      position: absolute;
+      top: 0vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* Adjust the text position */
+      color: white;
+      font-size: 12vh;
+      opacity: 0.8;
+      text-decoration: underline;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+   }
    
- }
  .homeScreenMainRecipeBtn{
     background-color:#354f52;
     border-radius: 8px;
@@ -58,4 +91,17 @@
         width: 100%;
         background-size: cover;
     }
+
+   & .h3 {
+      position: absolute;
+      text-align: center;
+      top: 22vh;
+      left: 50%;
+      transform: translate(-50%, -50%);/* Adjust the text position */
+       margin-top: 5px;
+      color: white;
+      font-size: 2.0vh;
+      opacity: 0.5;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
 }
