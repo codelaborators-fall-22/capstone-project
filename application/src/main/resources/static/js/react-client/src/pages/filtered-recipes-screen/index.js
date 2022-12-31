@@ -20,7 +20,7 @@ const FilteredRecipesScreen = () => {
         console.log(result);
       }
       else {
-        const result = await Axios(`http://localhost:8080/recipeslocalhost${category.category}`);
+        const result = await Axios(`http://localhost:8080/recipes/${category.category}`);
         console.log(result);
       }
     }
