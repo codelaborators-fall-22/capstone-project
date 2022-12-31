@@ -16,7 +16,7 @@ const FilteredRecipesScreen = () => {
 
     const fetchData = async () => {
       if (category.category === 'breakfast' || category.category === 'lunch' || category.category === 'dinner') {
-        const result = await Axios(`http://localhost:8080/recipes/meal/mealType${category.category}`);
+        const result = await Axios(`http://localhost:8080/recipes/meal/${category.category}`);
         console.log(result);
       }
       else {
