@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+
 import Axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 const FilteredRecipesScreen = () => {
   const category = useParams();
@@ -15,6 +16,7 @@ const FilteredRecipesScreen = () => {
   useEffect(() => {
 
     const fetchData = async () => {
+ meal-difficulty-level-api-filtering
       if (category.category === 'breakfast' || category.category === 'lunch' || category.category === 'dinner') {
         const result = await Axios(`http://localhost:8080/recipes/meal/${category.category}`);
         console.log(result);
@@ -26,9 +28,26 @@ const FilteredRecipesScreen = () => {
     }
 
 
+      const result = await Axios(`http://localhost:8080/recipes/${category.category}`);
+      setRecipesToDisplay(result.data);
+    }
+
+    fetchData();
+ 
+
     fetchData();
 
+ meal-difficulty-level-api-filtering
   }, []);
+
+  const history = useHistory();
+
+  const renderRedirect = (id) => {
+    return history.push(`/recipes/recipe/${id}`)
+
+  }
+
+
 
 
 
@@ -40,7 +59,7 @@ const FilteredRecipesScreen = () => {
         return (
           <div>
             <img src={recipe.imageUrl} alt='' />
-            <h2>{recipe.recipeName}</h2>
+            <h2 onClick={() => renderRedirect(recipe.id)}>{recipe.recipeName}</h2>
             <h3>Difficulty: {recipe.difficultyLevel}</h3>
             <p>Ingredients</p>
             {recipe.ingredients.map(ingredient => {
