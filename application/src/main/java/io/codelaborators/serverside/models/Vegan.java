@@ -8,16 +8,8 @@ import java.util.List;
 
 @Entity
 public class Vegan extends Recipe{
-    @GeneratedValue
-    @Id
 
-    private Long Id;
     private String imageUrl;
-
-
-    public Long getId() {
-        return Id;
-    }
 
 
     public String getImageUrl() {
