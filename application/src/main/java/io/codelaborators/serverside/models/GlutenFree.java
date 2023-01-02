@@ -9,16 +9,8 @@ import java.util.List;
 @Entity
 public class GlutenFree extends Recipe {
 
-    @Id
-    @GeneratedValue
-
-    private Long id;
 
     private String imageUrl;
-
-    public Long getId() {
-        return id;
-    }
 
     public String getImageUrl() {
         return imageUrl;

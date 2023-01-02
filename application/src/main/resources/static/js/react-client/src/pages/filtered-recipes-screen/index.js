@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-
+import { useHistory, useParams } from 'react-router-dom';
 
 import Axios from 'axios';
-import { useHistory, useParams } from 'react-router-dom';
 
 const FilteredRecipesScreen = () => {
   const category = useParams();
@@ -16,28 +15,20 @@ const FilteredRecipesScreen = () => {
   useEffect(() => {
 
     const fetchData = async () => {
- meal-difficulty-level-api-filtering
       if (category.category === 'breakfast' || category.category === 'lunch' || category.category === 'dinner') {
         const result = await Axios(`http://localhost:8080/recipes/meal/${category.category}`);
         console.log(result);
+        setRecipesToDisplay(result.data);
       }
       else {
         const result = await Axios(`http://localhost:8080/recipes/${category.category}`);
         console.log(result);
+        setRecipesToDisplay(result.data);
       }
     }
 
-
-      const result = await Axios(`http://localhost:8080/recipes/${category.category}`);
-      setRecipesToDisplay(result.data);
-    }
-
-    fetchData();
- 
-
     fetchData();
 
- meal-difficulty-level-api-filtering
   }, []);
 
   const history = useHistory();
@@ -46,9 +37,6 @@ const FilteredRecipesScreen = () => {
     return history.push(`/recipes/recipe/${id}`)
 
   }
-
-
-
 
 
   return (
