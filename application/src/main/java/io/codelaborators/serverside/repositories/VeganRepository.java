@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface VeganRepository extends CrudRepository <Vegan, Long> {
+public interface VeganRepository extends CrudRepository<Vegan, Long> {
 
         List<Vegan> findByDifficultyLevel(String difficultyLevel);
 
