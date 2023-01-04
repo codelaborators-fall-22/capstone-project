@@ -11,6 +11,7 @@ const App = () => {
     
 
      
+
     <BrowserRouter>
 
       <div className={style.page}>
