@@ -1,7 +1,17 @@
 .recipeCategories {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
-   gap: 10px
+   gap: 10px;
+
+   @media(max-width: 1075px) {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   @media(max-width:850px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
  }
 
  .categoryContainer{
@@ -18,7 +28,7 @@
       width: auto;
     }
  }
-}
+
 
 
 .categoryContainer h4 {
@@ -64,7 +74,10 @@
       opacity: 0.8;
       text-decoration: underline;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      @media(max-width: 1130px) {
+         font-size: 6vh;
       }
+   }
    }
    
  .homeScreenMainRecipeBtn{
@@ -103,5 +116,9 @@
       font-size: 2.0vh;
       opacity: 0.5;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+      @media(max-width: 1130px) {
+         top: 12vh;
+      }
    }
 }

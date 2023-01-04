@@ -13,10 +13,7 @@ const App = () => {
      
       <div className={style.page}>
 
-      <Header />
-      <AppRouter />
-
-      <div className={style.page}>
+      
         <Header />
         <AppRouter />
         <Footer />

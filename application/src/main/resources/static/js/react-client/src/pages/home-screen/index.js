@@ -19,8 +19,8 @@ const HomeScreen = () => {
           <img src={spoonsHeroImg}  alt="spoons hero image"/>
           
           <div>
-            <h2className={style.h2}>RecipeMe</h2>
-            <h3 className={style.h3}>Having trouble finding tasty recipes that work with your dietary preferences? This online recipe repository has everything you are looking for. We've handpicked our favorite recipes and sorted them by dietary preference, meal type, and more. Choose from the categories below or click the recipe button to find your new favorite meals!</h3>
+            <h2 className={style.h2}>RecipeMe</h2>
+            <h3 className={style.h3}> Organized, Tasty, Handpicked</h3>
             <button className={style.homeScreenMainRecipeBtn} onClick = { ()=>history.push("/recipes") }>Find recipes</button>
           </div>
 
