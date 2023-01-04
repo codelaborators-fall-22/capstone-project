@@ -1,9 +1,9 @@
 package io.codelaborators.serverside.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.List;
+        import javax.persistence.Entity;
+        import javax.persistence.GeneratedValue;
+        import javax.persistence.Id;
+        import java.util.List;
 
 
 @Entity
@@ -23,4 +23,12 @@ public class Vegan extends Recipe{
 
     public Vegan(){}
 }
+
+
+
+
+
+
+
+
 

@@ -70,27 +70,6 @@ const HomeScreen = () => {
           <p>The vegan diet excludes any animal-based products. It focuses on plant-based foods such as vegetables and legumes. Meats, eggs, dairy, and honey are all avoided.</p>
           <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/vegan")}>See more →</button>
         </div>
-
-        <div className={style.categoryContainer}>
-          <img src={MediterraneanImg} alt="Mediterranean Image" />
-          <h4>Mediterranean Recipes</h4>
-          <p>Mediterranean Description</p>
-          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/mediterranean")}>See more →</button>
-        </div>
-
-        <div className={style.categoryContainer}>
-          <img src={PaleoImg} alt="Paleo Image" />
-          <h4>Paleo Recipes</h4>
-          <p>Paleo Description</p>
-          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/paleo")}>See more →</button>
-        </div>
-
-        <div className={style.categoryContainer}>
-          <img src={veganImg} alt="vegan recipe image" />
-          <h4>Vegan Recipes</h4>
-          <p>Vegan Description</p>
-          <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/vegan")}>See more →</button>
-        </div>
       </div>
 
 
