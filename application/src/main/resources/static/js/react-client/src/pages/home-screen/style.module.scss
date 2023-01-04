@@ -91,28 +91,17 @@
         opacity: 0.5;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      }
-
-     & .homeScreenMainRecipeBtn{
-        background-color: #52796f;
-        border-radius: 8px;
-        color: aliceblue;
-        font-family: sans-serif;
-        font-size: 50px;
-        transform: translate(-0%, -500%);/* Adjust the text position */
    }
+}
 
-   }
-   
- .homeScreenMainRecipeBtn{
-    background-color:#354f52;
+.homeScreenMainRecipeBtn{
+    background-color: #52796f;
     border-radius: 8px;
     color: aliceblue;
     font-family: sans-serif;
-    font-size: 15px;
- }
- 
+    font-size: 50px;
+    transform: translate(-0%, -500%);/* Adjust the text position */
 }
-
 
  .homeScreenRecipeCatBtn {
     background-color:#354f52;
@@ -143,5 +132,4 @@
          top: 12vh;
       }
    }
-
 }

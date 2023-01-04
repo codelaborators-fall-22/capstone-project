@@ -29,6 +29,8 @@ public class Initializer implements CommandLineRunner {
 
     @Resource
     private KetoRepository ketoRepo;
+
+    @Resource
     private VeganRepository veganRepo;
 
 
