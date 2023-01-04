@@ -5,6 +5,7 @@ import io.codelaborators.serverside.repositories.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class Initializer implements CommandLineRunner {
 
     @Resource
     private KetoRepository ketoRepo;
+    private VeganRepository veganRepo;
 
 
     @Override
@@ -252,7 +254,7 @@ public class Initializer implements CommandLineRunner {
         dairyFreeRecipe3Ingredients.add("1 tsp dijon mustard");
         dairyFreeRecipe3Ingredients.add("1/4 tsp minced or pressed garlic");
 
-        dairyFreeRecipe3Steps.add("Preheat oven to 425 degrees F");
+        dairyFreeRecipe3Steps.add("Preheat oven to 425°");
         dairyFreeRecipe3Steps.add("Place the asparagus on a rimmed baking sheet and toss with the 1 tbsp olive oil and 1/8 tsp salt. Arrange in single layer, leaving space for the salmon.");
         dairyFreeRecipe3Steps.add("Place the salmon skin side down on the baking sheet. Brush the salmon with the remaining 1 tsp olive oil and season with the remaining 1/8 tsp salt and pepper.");
         dairyFreeRecipe3Steps.add("Bake for 15 minutes or until center of the salmon reaches 165 degrees F and the asparagus spears are tender and beginning to brown at the tips.");
@@ -285,6 +287,134 @@ public class Initializer implements CommandLineRunner {
 
         Keto ketoRecipe1 = new Keto("Parmesan Crusted Brussels Sprouts", 25, "medium", ketoRecipe1Ingredients, 4, 25, 180, 4, 10, 4, 376, 10, "dinner", ketoRecipes1Steps, "/images/smashed-brussel-sprouts.jpg");
         ketoRepo.save(ketoRecipe1);
+
+
+        List<String> veganSouthwestSkilletIngredients = new ArrayList<>();
+        List<String> veganSouthwestSkilletSteps = new ArrayList<>();
+
+        veganSouthwestSkilletIngredients.add("1 cup sliced mushrooms");
+        veganSouthwestSkilletIngredients.add("1 cup diced zucchini");
+        veganSouthwestSkilletIngredients.add("1/2 cup onion, red or white");
+        veganSouthwestSkilletIngredients.add("1/2 chopped green onion");
+        veganSouthwestSkilletIngredients.add("handful of fresh chopped cilantro");
+        veganSouthwestSkilletIngredients.add("1/2 a red bell pepper, diced");
+        veganSouthwestSkilletIngredients.add("1 sliced vegan sausage");
+        veganSouthwestSkilletIngredients.add("1 tsp garlic powder");
+        veganSouthwestSkilletIngredients.add("1 tsp chili powder");
+        veganSouthwestSkilletIngredients.add("1/2 tsp cumin");
+        veganSouthwestSkilletIngredients.add("1/2 tsp paprika");
+        veganSouthwestSkilletIngredients.add("salt and pepper, to taste");
+        veganSouthwestSkilletIngredients.add("avocado, for serving");
+        veganSouthwestSkilletIngredients.add("salsa, for serving");
+
+        veganSouthwestSkilletSteps.add("Add everything except the avocado and salsa to a skillet.");
+        veganSouthwestSkilletSteps.add("Cook over medium-high heat until the veggies are softened and nicely browned, about 6-7 minutes.");
+        veganSouthwestSkilletSteps.add("Season with salt and pepper.");
+        veganSouthwestSkilletSteps.add("Top with avocado, salsa, extra chopped green onion and fresh cilantro. ");
+        veganSouthwestSkilletSteps.add("Serve Immediately; Enjoy!");
+
+        Vegan veganSouthwestSkillet = new Vegan("Southwest Skillet", 5, "easy", veganSouthwestSkilletIngredients, 1, 10, 361, 12, 34, 12, 202, 31, "breakfast", veganSouthwestSkilletSteps, "/images/vegan-southwest-skillet.png");
+        veganRepo.save(veganSouthwestSkillet);
+
+
+        List<String> veganBlueberryCoconutMuffinsIngredients = new ArrayList<>();
+        List<String> veganBlueberryCoconutMuffinsSteps = new ArrayList<>();
+
+        veganBlueberryCoconutMuffinsIngredients.add("1 flax egg  (1 tbsp ground flax seeds mixed with 3 tbsp water)");
+        veganBlueberryCoconutMuffinsIngredients.add("1 ¾ cups whole wheat pastry flour");
+        veganBlueberryCoconutMuffinsIngredients.add("¾ cup unsweetened shredded coconut");
+        veganBlueberryCoconutMuffinsIngredients.add("2 ½ tsp baking powder");
+        veganBlueberryCoconutMuffinsIngredients.add("½ tsp salt");
+        veganBlueberryCoconutMuffinsIngredients.add("¾ cup coconut oil, softened");
+        veganBlueberryCoconutMuffinsIngredients.add("½ cup maple syrup or agave nectar");
+        veganBlueberryCoconutMuffinsIngredients.add("¼ cup sugar");
+        veganBlueberryCoconutMuffinsIngredients.add("¾ cup unsweetened non dairy milk, lukewarm");
+        veganBlueberryCoconutMuffinsIngredients.add("1 to 1 ½ cups blueberries (fresh or frozen)");
+        veganBlueberryCoconutMuffinsIngredients.add("Cooking spray");
+
+        veganBlueberryCoconutMuffinsSteps.add("Preheat the oven at 400°F.");
+        veganBlueberryCoconutMuffinsSteps.add("Line a muffin pan with 12 liners and coat them with cooking spray.");
+        veganBlueberryCoconutMuffinsSteps.add("Combine the ground flax seeds with 3 tbsp water In a small bowl. Set aside.");
+        veganBlueberryCoconutMuffinsSteps.add("Combine the flour, shredded coconut, baking powder and salt in a medium bowl and set aside.");
+        veganBlueberryCoconutMuffinsSteps.add("Using an electric mixer, beat the coconut oil, maple syrup or agave and sugar together at medium speed until creamy, 2-3 minutes.");
+        veganBlueberryCoconutMuffinsSteps.add("Add the milk and flax mixture and keep beating until well combined (the mixture might look curdled).");
+        veganBlueberryCoconutMuffinsSteps.add("Add the flour mixture and beat at low speed until just combined (do not overmix).");
+        veganBlueberryCoconutMuffinsSteps.add("Gently fold in the blueberries using a wooden spoon or a spatula.");
+        veganBlueberryCoconutMuffinsSteps.add("Scoop about ¼ cup of batter into the muffin liners.");
+        veganBlueberryCoconutMuffinsSteps.add("Bake for 25-30 minutes");
+
+        Vegan veganBlueberryCoconutMuffins = new Vegan("Blueberry Coconut Muffins", 15, "hard", veganBlueberryCoconutMuffinsIngredients, 12, 30, 238, 15, 2, 14, 121, 24, "breakfast", veganBlueberryCoconutMuffinsSteps, "/images/vegan-blueberry-coconut-muffins.png");
+        veganRepo.save(veganBlueberryCoconutMuffins);
+
+
+        List<String> veganBreakfastBurritosIngredients = new ArrayList<>();
+        List<String> veganBreakfastBurritosSteps = new ArrayList<>();
+
+        veganBreakfastBurritosIngredients.add("1 diced bell pepper or sweet potato");
+        veganBreakfastBurritosIngredients.add("1/2 cup diced vegetables of choice");
+        veganBreakfastBurritosIngredients.add("16 oz tofu, silken or firm");
+        veganBreakfastBurritosIngredients.add("optional 1 tbsp minced garlic");
+        veganBreakfastBurritosIngredients.add("optional 1 tbsp nutritional yeast");
+        veganBreakfastBurritosIngredients.add("1 tsp each: curry powder and onion powder");
+        veganBreakfastBurritosIngredients.add("1/2 tsp ground turmeric");
+        veganBreakfastBurritosIngredients.add("1/2 tsp salt, and optional pinch black pepper");
+        veganBreakfastBurritosIngredients.add("1 handful spinach or kale if desired");
+        veganBreakfastBurritosIngredients.add("tortillas (your choice of size)");
+        veganBreakfastBurritosIngredients.add("burrito add-ins of choice, such as vegan cheese, salsa, hash browns, or sliced avocado");
+
+        veganBreakfastBurritosSteps.add("Grease a nonstick pan using either oil or cooking spray to prevent sticking.");
+        veganBreakfastBurritosSteps.add("Sauté the vegetables (and optional garlic) over medium heat until lightly browned.");
+        veganBreakfastBurritosSteps.add("Drain the tofu and add it to the pan.");
+        veganBreakfastBurritosSteps.add("Break it up with a spatula.");
+        veganBreakfastBurritosSteps.add("Add spices and salt.");
+        veganBreakfastBurritosSteps.add("Continue cooking—stirring occasionally—until tofu is hot and the liquid has evaporated so it looks like scrambled eggs.");
+        veganBreakfastBurritosSteps.add("Stir in optional spinach until it wilts.");
+        veganBreakfastBurritosSteps.add("Portion into the middle of each tortilla (see recipe video for a visual), add toppings if desired, and wrap up tightly.");
+        veganBreakfastBurritosSteps.add("Burritos can be served immediately or wrapped in foil and refrigerated or frozen in a resealable bag or airtight container.");
+
+        Vegan veganBreakfastBurritos = new Vegan("Breakfast Burritos", 15, "medium", veganBreakfastBurritosIngredients, 6, 15, 124, 4, 12, 4, 431, 10, "breakfast", veganBreakfastBurritosSteps, "/images/vegan-breakfast-burritos.png");
+        veganRepo.save(veganBreakfastBurritos);
+
+
+        List<String> veganGyrosIngredients = new ArrayList<>();
+        List<String> veganGyrosSteps = new ArrayList<>();
+
+        veganGyrosIngredients.add("12 oz sliced mushrooms , white, or a mix of cremini, white, bella");
+        veganGyrosIngredients.add("1/2 cup sliced onion");
+        veganGyrosIngredients.add("2 tbsp vegan Worcestershire sauce");
+        veganGyrosIngredients.add("4 tsp shawarma spice blend");
+        veganGyrosIngredients.add("1 tsp sugar or other sweetener");
+        veganGyrosIngredients.add("Optional addins: 2 cloves of garlic minced , salt if needed");
+        veganGyrosIngredients.add("sliced onion, cucumber, tomato");
+        veganGyrosIngredients.add("chopped lettuce or greens, pickles");
+        veganGyrosIngredients.add("3 Pita breads");
+        veganGyrosIngredients.add("For the tzatziki sauce:");
+        veganGyrosIngredients.add("7 oz firm tofu , drained");
+        veganGyrosIngredients.add("1/2 tsp garlic powder or 1 cloves of garlic");
+        veganGyrosIngredients.add("1 tablespoon lemon juice");
+        veganGyrosIngredients.add("1 teaspoon white vinegar");
+        veganGyrosIngredients.add("1/4 teaspoon salt");
+        veganGyrosIngredients.add("1/8 teaspoon black pepper");
+        veganGyrosIngredients.add("1 teaspoon dried dill or 1 tbsp fresh");
+        veganGyrosIngredients.add("1/2 English cucumber , peeled and cubed");
+
+        veganGyrosSteps.add("Add everything to a saucepan, cover and cook over medium heat.");
+        veganGyrosSteps.add("Add 1/4 cup water to deglaze after 5 mins.");
+        veganGyrosSteps.add("Cover and Cook for another 6 to 8 mins or until mushrooms are tender to preference.");
+        veganGyrosSteps.add("Slice onions, cucumber and tomatoes if using.");
+        veganGyrosSteps.add("Chop up some greens or lettuce.");
+        veganGyrosSteps.add("Warm the pita bread.");
+        veganGyrosSteps.add("For the tzatziki sauce:");
+        veganGyrosSteps.add("Process the tofu through black pepper in a food processor until smooth. Add tbsp water if needed.");
+        veganGyrosSteps.add("Add dill and cucumber and pulse until cucumber is evenly chopped.");
+        veganGyrosSteps.add("Taste and adjust salt.");
+        veganGyrosSteps.add("Assemble: Add greens if using, add the mushrooms, cucumber, onion, tomato and a generous helping of tzatziki (see below). Serve immediately.");
+
+        Vegan veganGyros = new Vegan("Gyros", 10, "easy", veganGyrosIngredients, 3, 25, 220, 4, 13, 7, 351, 33, "lunch", veganGyrosSteps, "/images/vegan-gyros.png");
+        veganRepo.save(veganGyros);
+
+
+
 
     }
 }
