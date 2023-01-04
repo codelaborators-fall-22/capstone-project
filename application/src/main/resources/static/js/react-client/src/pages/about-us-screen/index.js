@@ -21,7 +21,6 @@ const AboutUsScreen = () => {
               <h4>Alli Folluo</h4>
               <p>Hi Everyone! I am currently working as a finance business manager supporting the Consumer and Community Bank Data and Analytics organization at JP Morgan Chase. </p>
               <p>Prior to my role at Chase, I was an analyst in operations and asset management for local start ups in residential real estate development and completed my MBA at Ohio State University. My expertise lies in standing up new workflows, creating process efficiencies, and managing key partners.</p>
-              <p>I have always been in love with organization, efficiency, and high-end design and truly feel I have found an industry I am passionate about and can be successful in. CodeLaborators bootcamp provided me with valuable skills to be able to bring my ideas to life in software development.</p>
               <p>A few of my goals after completing this bootcamp are to create my own software apps, collaborate on app production with colleagues, and join a development team to continue to advance my skillset. I hope you enjoy our website and find some tasty recipes!</p>
             </div>
          
