@@ -1,7 +1,9 @@
 import AlliHeadshotImg from '../../assets/alli-headshot.jpeg';
+import ChrisHeadshotImg from '../../assets/chris-headshot.jpg';
 import React from 'react';
 import style from './style.module.scss';
 import teamHeroImg from '../../assets/steak.jpg';
+
 
 const AboutUsScreen = () => {
   return (
@@ -26,9 +28,10 @@ const AboutUsScreen = () => {
          
 
             <div className={style.individualProfiles}>
-              <img src="insert img 2 here" alt="profile image 2"/>
+              <img src={ChrisHeadshotImg} alt="Chris profile image"/>
               <h4>Chris Lanier</h4>
-              <p>Profile Details 2</p>
+              <p>I'm a lifelong learner that has recently fell in love with software development. Currently, I'm in Content Operations for a division of The American Chemical Society, where I process chemical and structural data extracted from patents and journal articles. </p>
+              <p>My goals, after the bootcamp, are to expand my skills and knowledge by contributing to open-source projects and completing my own personal projects. After gaining a level of proficiency, I will began to seek a full-time Junior Software Developer role.</p>
             </div>
 
             <div className={style.individualProfiles}>
