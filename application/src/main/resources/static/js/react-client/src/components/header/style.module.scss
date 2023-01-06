@@ -1,9 +1,10 @@
 .header {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     margin: auto;
+
     background-color: #52796f;
     height: 80px;
 

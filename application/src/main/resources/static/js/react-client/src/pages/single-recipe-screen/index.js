@@ -1,8 +1,9 @@
-import React from 'react'
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+
 import Axios from 'axios';
+import React from 'react'
 import style from './style.module.scss';
+import { useParams } from 'react-router';
 
 const SingleRecipeScreen = () => {
 
@@ -26,32 +27,42 @@ const SingleRecipeScreen = () => {
   return (
         recipe === null ? <h2>Loading...</h2>:
     
-        <div>
-            <img src={recipe.imageUrl} alt='' />
+        <div className={style.container}>
             <h2 className={style.nameOfRecipe}>{recipe.recipeName}</h2>
-            <h3>Difficulty: {recipe.difficultyLevel}</h3>
-            <p>Ingredients</p>
+              
+            <div className={style.subheaderGrid}>
+                <img src={recipe.imageUrl} alt='' />
+                <div className={style.headerText}>
+                  <div className={style.filters}>
+                    <h2>Difficulty: {recipe.difficultyLevel}</h2>
+                    <h2>Prep Time:{recipe.prepTime}</h2>
+                    <h2>Meal Type:{recipe.mealType}</h2>
+                    <h2>Serving Size:{recipe.servingSize}</h2>
+                  </div>
+                
+                  <div className={style.nutritionLabel}>
+                    <h2>Calories:{recipe.calories}</h2>
+                    <h2>Carbs:{recipe.carbs}</h2>
+                    <h2>Fat:{recipe.fat}</h2>
+                    <h2>Protein:{recipe.protein}</h2>
+                    <h2>Sodium:{recipe.sodium}</h2>
+                    <h2>Sugar:{recipe.sugar}</h2>
+                  </div>
+                </div>
+            </div>
+        
+          <h2 className={style.subheader}>Ingredients</h2>
             {recipe.ingredients.map(ingredient => {
               return (
-                <li>{ingredient}</li>
+                <li className={style.ingredient}>{ingredient}</li>
               )
             })}
-           <div>
-            <h2>Prep Time:{recipe.prepTime}</h2>
-           </div>
-           <h2>Meal Type:{recipe.mealType}</h2>
-           <h2>Serving Size:{recipe.servingSize}</h2>
-           <h2>Calories:{recipe.calories}</h2>
-           <h2>Carbs:{recipe.carbs}</h2>
-           <h2>Fat:{recipe.fat}</h2>
-           <h2>Protein:{recipe.protein}</h2>
-           <h2>Sodium:{recipe.sodium}</h2>
-           <h2>Sugar:{recipe.sugar}</h2>
-           <h2>Steps</h2>
+          
+           <h2 className={style.subheader}>Steps</h2>
             <ol> 
            {recipe.steps.map(ingredient => {
               return (
-                <li>{ingredient}</li>
+                <li className={style.ingredient}>{ingredient}</li>
               )
             })}
             </ol>

@@ -84,20 +84,20 @@ public class Initializer implements CommandLineRunner {
         List<String> glutenFreeRecipe3steps = new ArrayList<>();
         List<String> glutenFreeRecipe3ingredients = new ArrayList<>();
 
-        glutenFreeRecipe3ingredients.add("2 tablespoons of grassfed butter");
+        glutenFreeRecipe3ingredients.add("2 tablespoons of grass fed butter");
         glutenFreeRecipe3ingredients.add(" 3 cloves minced fresh garlic");
         glutenFreeRecipe3ingredients.add("1 teaspoon chopped fresh thyme");
         glutenFreeRecipe3ingredients.add("salt and black pepper");
         glutenFreeRecipe3ingredients.add(" 5 lamb loin chops");
 
-        glutenFreeRecipe3ingredients.add("Heat a dry cast iron skillet over a medium high heat, " +
+        glutenFreeRecipe3steps.add("Heat a dry cast iron skillet over a medium high heat, " +
                 "Then, place the chops narrow fat side");
-        glutenFreeRecipe3ingredients.add("Using tongs press the chops down so that the fat " +
+        glutenFreeRecipe3steps.add("Using tongs press the chops down so that the fat " +
                 "renders and turns crisp and brown");
-        glutenFreeRecipe3ingredients.add("Once the fat has melted into the pan, lay the chops " +
+        glutenFreeRecipe3steps.add("Once the fat has melted into the pan, lay the chops " +
                 "flat on one of their sides. Cook them until browned, then turn and cook on the other side");
-        glutenFreeRecipe3ingredients.add("Add 2 tablespoons of butter, garlic and thyme");
-        glutenFreeRecipe3ingredients.add("Stir well until the butter is foaming, " +
+        glutenFreeRecipe3steps.add("Add 2 tablespoons of butter, garlic and thyme");
+        glutenFreeRecipe3steps.add("Stir well until the butter is foaming, " +
                 "and spoon the butter over the lamb for a minute");
 
 
@@ -192,7 +192,7 @@ public class Initializer implements CommandLineRunner {
         paleoSesameChickenSteps.add("Place chicken on a paper-towel-lined plate and repeat the process for the remaining chicken, adjusting the temperature of the heat as needed and adding more oil if needed.");
         paleoSesameChickenSteps.add("Gently reheat the sesame sauce and toss it with the chicken. To serve, sprinkle all over with sesame seeds and green onion and and serve over sautéed cauliflower rice or your favorite veggies. Enjoy!");
 
-        Paleo paleoSesameChickenRecipe = new Paleo("SesameChickenRecipe", 15, "medium", paleoSesameChickenIngredients, 6, 20, 382, 12, 32, 13, 869, 37, "dinner", paleoSesameChickenSteps, "/images/paleo-sesame-chicken.jpg");
+        Paleo paleoSesameChickenRecipe = new Paleo("Sesame Chicken", 15, "medium", paleoSesameChickenIngredients, 6, 20, 382, 12, 32, 13, 869, 37, "dinner", paleoSesameChickenSteps, "/images/paleo-sesame-chicken.jpg");
         paleoRepo.save(paleoSesameChickenRecipe);
 
         List<String> paleoCreamyTuscanChickenIngredients = new ArrayList<>();
@@ -221,7 +221,7 @@ public class Initializer implements CommandLineRunner {
         paleoCreamyTuscanChickenSteps.add("Whisk in the tapioca or arrowroot, the add the broth and coconut milk. Stir to combine, then stir in the mustard, yeast, Italian seasoning, sea salt and pepper. Cook and stir over medium-high heat until it starts to thicken.");
         paleoCreamyTuscanChickenSteps.add("Add the spinach and sun-dried tomatoes and allow mixture to simmer until spinach is wilted and tomatoes are softened. Add chicken back to the skillet and simmer another 2 minutes. Serve over cauli rice, zucchini noodles, or with roasted potatoes. Enjoy!");
 
-        Paleo paleoCreamyTuscanChickenRecipe = new Paleo("CreamyTuscanChickenRecipe", 10, "hard", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "/images/paleo-tuscan-chicken.jpg");
+        Paleo paleoCreamyTuscanChickenRecipe = new Paleo("Creamy Tuscan Chicken", 10, "hard", paleoCreamyTuscanChickenIngredients, 6, 20, 368, 25, 23, 5, 253, 12, "dinner", paleoCreamyTuscanChickenSteps, "/images/paleo-tuscan-chicken.jpg");
         paleoRepo.save(paleoCreamyTuscanChickenRecipe);
 
         List<String> paleoSweetPotatoPancakesIngredients = new ArrayList<>();
@@ -239,7 +239,7 @@ public class Initializer implements CommandLineRunner {
         paleoSweetPotatoPancakesSteps.add("Heat coconut oil in a skillet over medium heat. Pour about 1/4 cup of batter out and cook until bubbles start to form. Flip the pancake and cook for about another minute or two until fully cooked.");
         paleoSweetPotatoPancakesSteps.add("Repeat with the rest of the batter. Enjoy!");
 
-        Paleo paleoSweetPotatoPancakesRecipe = new Paleo("SweetPotatoPancakes", 0, "easy", paleoSweetPotatoPancakesIngredients, 4, 15, 110, 7, 4, 3, 126, 9, "breakfast", paleoSweetPotatoPancakesSteps, "/images/paleo-sweet-potato-pancakes.jpg");
+        Paleo paleoSweetPotatoPancakesRecipe = new Paleo("Sweet Potato Pancakes", 10, "easy", paleoSweetPotatoPancakesIngredients, 4, 15, 110, 7, 4, 3, 126, 9, "breakfast", paleoSweetPotatoPancakesSteps, "/images/paleo-sweet-potato-pancakes.jpg");
         paleoRepo.save(paleoSweetPotatoPancakesRecipe);
 
 

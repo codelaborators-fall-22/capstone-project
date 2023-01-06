@@ -71,17 +71,6 @@ const HomeScreen = () => {
           <button className={style.homeScreenRecipeCatBtn} onClick={() => history.push("/recipes/vegan")}>See more →</button>
         </div>
       </div>
-
-
-      <h2>Meal Types</h2>
-      <button onClick={() => history.push("recipes/breakfast")}>Breakfast</button>
-      <button onClick={() => history.push("recipes/lunch")}>Lunch</button>
-      <button onClick={() => history.push("recipes/dinner")}>Dinner</button>
-
-      <h2>Difficulty Level</h2>
-      <button onClick={() => history.push("recipes/easy")}>Easy</button>
-      <button onClick={() => history.push("recipes/medium")}>Medium</button>
-      <button onClick={() => history.push("recipes/hard")}>Hard</button>
     </div>
   );
 }
