@@ -1,4 +1,4 @@
-import ForkLogo from '../../assets/fork.png';
+import ForkLogo from '../../assets/Logo.png';
 import { NavLink } from 'react-router-dom';
 import React from 'react';
 import style from './style.module.scss';
@@ -8,8 +8,8 @@ const Header = () => {
     <div className={style.header}>
       <div>
         <nav className={style.logo}>
-        <NavLink to={'/'}>{ForkLogo}</NavLink>
-          </nav>
+          <NavLink to={'/'}>{ForkLogo}</NavLink>
+        </nav>
       </div>
       <div>
         <nav className={style.nav}>

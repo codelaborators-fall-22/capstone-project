@@ -26,7 +26,7 @@ const HomeScreen = () => {
           </div>
 
       </div>
-
+      <div className={style.homeScreenMainRecipeBtnMobile} onClick = { ()=>history.push("/recipes") }>Find recipes</div>
 
       <div className={style.recipeCategories}>
         <div className={style.categoryContainer}>
