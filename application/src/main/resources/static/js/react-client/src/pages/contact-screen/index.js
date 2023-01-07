@@ -1,6 +1,6 @@
 import React from 'react';
+import contactUs from '../../assets/peaches.jpg';
 import style from './style.module.scss';
-import contactUs from '../../assets/contactus.jpg';
 
 const ContactScreen = () => {
   return (

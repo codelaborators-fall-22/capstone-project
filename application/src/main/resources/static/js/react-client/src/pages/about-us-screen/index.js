@@ -1,9 +1,11 @@
 import AlliHeadshotImg from '../../assets/alli-headshot.jpeg';
 import ChrisHeadshotImg from '../../assets/chris-headshot.jpg';
+import GaylonHeadshotImg from '../../assets/gaylon.jpg';
+import MikeHeadshotImg from '../../assets/Mike.jpg';
+import MukaHeadshotImg from '../../assets/muka.png';
 import React from 'react';
 import style from './style.module.scss';
 import teamHeroImg from '../../assets/steak.jpg';
-
 
 const AboutUsScreen = () => {
   return (
@@ -12,8 +14,8 @@ const AboutUsScreen = () => {
           <img src={teamHeroImg}  alt="about us hero image"/>
           <div>
             <h2>Meet our team</h2>
-            <h3>We are a team of new software developers and the first cohort graduating from the CodeLaborators bootcamp! Over the last 4 months we've built fundemental skills in Java, JavaSCript, Spring, React, API Development, HTML, CSS, Git, and GitHub.</h3>
-            <p> As our final project, we chose to create a dynamic online recipe repository to highlight our proficiency in software design and development. Not only did this project allow us to work together as a team to build our skillsets, it was a design we believe we can further expand on after the bootcamp. The idea came from us wanting to build a tool for those who struggle with finding healthy, tasty, meals that fit their dietary needs. With everyone's busy lives, we know how difficult this can be for those trying to stick to a plan.</p>
+            <h3>We are a team of new software developers and the first cohort graduating from the CodeLaborators bootcamp! </h3>
+            <p>Over the last 4 months we've built fundemental skills in Java, JavaSCript, Spring, React, API Development, HTML, CSS, Git, and GitHub.</p>
           </div>
         </div>
         
@@ -35,27 +37,25 @@ const AboutUsScreen = () => {
             </div>
 
             <div className={style.individualProfiles}>
-              <img src="insert img 3 here" alt="profile image 3"/>
-              <h4>Gaylon </h4>
-              <p>Profile Details 3</p>
+              <img src={GaylonHeadshotImg} alt="Gaylon profile image"/>
+              <h4>Gaylon Knox</h4>
+              <p>Hello! I am currently employed with Medical Mutual of Ohio as Medicare Enrollment Coordinator.</p>
+              <p>My primary background has been within the financial and insurance industries serving in supervisory, auditing and oversight roles.</p>
+              <p>Future goals include sharpening the skills learned in the CodeLaborators Bootcamp and seeking out roles in software testing and quality assurance function.</p>
+              <p>Thank you for taking time to check out our app---I'm sure there is something here that gets your appetite going--Enjoy!</p>
             </div>
         
             <div className={style.individualProfiles}>
-              <img src="insert img 4 here" alt="profile image 4"/>
-              <h4>Mike</h4>
-              <p>Profile Details 4</p>
+              <img src={MikeHeadshotImg} alt="Mike profile image"/>
+              <h4>Mike Changwe</h4>
+              <p>Hey, everyone! My name is Michael Changwe and I am estatic to be a part of the inaugaral Codelaborators cohort! After most recently working in technical recruitment and after a lot of conversation with engineers and personal research, I decided to make the transition into software development. </p>
+              <p>Growing up in the social media era I have always had a natural inclination towards the latest tech trends and innovations. Following the end the boot camp, I plan on increasing my profiency in all things full stack and hope to work as a Back End Developer in the near future.</p>
             </div>
         
             <div className={style.individualProfiles}>
-              <img src="insert img 5 here" alt="profile image 5"/>
-              <h4>Muka</h4>
-              <p>Profile Details 5</p>
-            </div>
-
-            <div className={style.individualProfiles}>
-              <img src="insert img 6 here" alt="profile image 6"/>
-              <h4>Name 6</h4>
-              <p>Profile Details 6</p>
+              <img src={MukaHeadshotImg} alt="Muka profile image"/>
+              <h4>Mukagala Shawa</h4>
+              <p>Mukagala has 8 years of customer service experience and 4 years of sales experience. Graduate  of business information systems and has a passion for system security and software technology.</p>
             </div>
         </div>
     </div>

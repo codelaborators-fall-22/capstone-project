@@ -1,14 +1,14 @@
 
 .contact {
     text-align: center;
-    background-color: #162d3c;
     position: relative;
 
     & img {
         margin-top: .25%;
         box-shadow: 0 0 15px 0.5px;
-        height: 100vh;
-        width: 60%;
+        height: auto;
+        opacity: .65;
+        width: 100%;
 
     }
 
@@ -18,9 +18,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
         /* Adjust the text position */
-        color: white;
+        color: #354f52;
         font-size: 80px;
-        opacity: 0.80;
+        
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 
