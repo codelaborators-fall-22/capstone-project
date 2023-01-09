@@ -9,6 +9,13 @@ const SingleRecipeScreen = () => {
 
     const id = useParams();
     const [recipe, setRecipe] = useState(null);
+    const [commentText, setCommentText]= useState('');
+    const [name, setName]=useState('');
+    const [comment, setComment]=useState({
+      comment: commentText,
+      userName: name,
+      recipeId: parseInt(id.id)
+    });
 
     useEffect(() => {
 
@@ -22,6 +29,27 @@ const SingleRecipeScreen = () => {
 
 
     }, [id.id]);
+
+    useEffect(() =>{
+      setComment({
+        comment: commentText,
+        userName: name,
+        recipeId: parseInt(id.id)
+      });
+    },  [commentText, name]);
+
+
+
+
+    const submitComment = () =>{
+
+      Axios.post(`http://localhost:8080/recipes/recipe/${id.id}/add-comment`, comment).then((response) => {
+        console.log(response.status);
+        console.log('DATA', response.data);
+        setRecipe(response.data[id.id - 1]);
+      });
+    }
+   
     
 
   return (
@@ -57,6 +85,21 @@ const SingleRecipeScreen = () => {
                 <li className={style.ingredient}>{ingredient}</li>
               )
             })}
+             <h2>Comments</h2>
+             <ul>
+              {recipe.comments && recipe.comments.map(comment => {
+                return (
+                  <div>
+                    <p>{comment.comment}</p>
+                    <p>{comment.userName}</p>
+                  </div>
+                )
+              })}
+             </ul>
+             <textarea onChange={(e) => setCommentText(e.target.value)} placeholder='enter your comment'></textarea>
+             <input onChange={(e) => setName(e.target.value)} type='text' placeholder='name'></input>
+             <button onClick={() => submitComment()}>Submit Comment</button>
+             
           
            <h2 className={style.subheader}>Steps</h2>
             <ol> 
