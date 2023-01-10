@@ -2,6 +2,7 @@ package io.codelaborators.serverside.controllers;
 
 import io.codelaborators.serverside.models.Comment;
 import io.codelaborators.serverside.models.Recipe;
+import io.codelaborators.serverside.repositories.CommentRepository;
 import io.codelaborators.serverside.repositories.RecipeRepository;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,7 +18,8 @@ public class RecipeController {
 
     @Resource
     private RecipeRepository recipeRepo;
-
+    @Resource
+    private CommentRepository commentRepo;
     @GetMapping("/recipes")
     public Collection<Recipe> getRecipes(){
         return (Collection<Recipe>) recipeRepo.findAll();
