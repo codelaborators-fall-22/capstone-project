@@ -1,6 +1,8 @@
 package io.codelaborators.serverside.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -26,6 +28,12 @@ public class Recipe {
     @Lob
     private List<String> steps;
     private String mealType;
+
+
+
+
+    @OneToMany
+    private List<Comment> comments;
 
     public Long getId() {
         return id;
@@ -83,7 +91,7 @@ public class Recipe {
         return steps;
     }
     public String getMealType(){return mealType;}
-    public Recipe(String recipeName,int prepTime, String difficultyLevel, List<String> ingredients, int servingSize, int cookTime, int calories, int fat, int protein, int sugar, int sodium, int carbs, String mealType,List <String> steps) {
+    public Recipe(String recipeName,int prepTime, String difficultyLevel, List<String> ingredients, int servingSize, int cookTime, int calories, int fat, int protein, int sugar, int sodium, int carbs, String mealType,List <String> steps, Comment ... comments) {
         this.recipeName = recipeName;
         this.prepTime = prepTime;
         this.difficultyLevel = difficultyLevel.toLowerCase();
@@ -98,7 +106,12 @@ public class Recipe {
         this.carbs = carbs;
         this.mealType =mealType.toLowerCase();
         this.steps = steps;
+        this.comments = new ArrayList<>(Arrays.asList(comments));
     }
 
     public Recipe(){}
+
+    public void addComment(Comment commentToAdd){
+        comments.add(commentToAdd);
+    }
 }
