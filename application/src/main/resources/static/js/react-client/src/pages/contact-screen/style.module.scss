@@ -1,24 +1,61 @@
 .contact {
     text-align: center;
- background-color: #162d3c;
- 
+    position: relative;
+
     & img {
         margin-top: .25%;
         box-shadow: 0 0 15px 0.5px;
-        height: 100vh; //vh means viewport percentage. Ex: 50vh (50%) of 800(browsers viewprts width) = 400px
-        width: 60%;
-        opacity: 0.80;
+        height: auto;
+        opacity: .65;
+        width: 100%;
+
     }
 
-   
-}
+    & .text {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Adjust the text position */
+        color: #354f52;
+        font-size: 80px;
 
- .text {
-  position: absolute;
-  top: 10%;
-  left: 40%;
-  bottom: 20%;
-  color: white;
-  font-size: 80px;
-  
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+    }
+
+    & form,
+    h2 {
+        background-color: #52796f;
+        color: #ffffff;
+        padding: 20px;
+        font-size: 25px;
+        position: absolute;
+        margin: auto;
+        top: 40%;
+        width: 30%;
+        right: 0px;
+        left: 0px;
+
+        & label {
+            padding: 20px;
+        }
+
+        @media(max-width: 900px) {
+            width: 75%;
+            ;
+        }
+
+    }
+
+    & label {
+        padding: 20px;
+    }
+
+
+
+
+
+
 }

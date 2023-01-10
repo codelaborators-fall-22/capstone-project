@@ -1,23 +1,38 @@
 .header {
     display: flex;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: space-between;
     margin: auto;
+
     background-color: #52796f;
     height: 80px;
+
+    @media(max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+}
+
+.logo {
+    & img {
+        height: 80px;
+        justify-content: center;
+        width: auto;
+    }
 
 }
 
 .nav {
     display: flex;
 
-
-
-
-
     & a {
-        background-color: #162d3c;
+
         align-items: center;
-        border: 2px solid white;
+
         border-radius: 10px;
         display: flex;
         justify-content: center;
@@ -27,10 +42,18 @@
         padding: 15px;
         font-weight: bolder;
         font-size: larger;
+        font-family: sans-serif;
         list-style-type: none;
         text-decoration: none;
     }
 
 
+    @media (max-width: 750px) {
+        .header {
+            width: 100%;
 
+        }
+
+
+    }
 }

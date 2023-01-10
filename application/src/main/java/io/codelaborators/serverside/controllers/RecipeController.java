@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Collection;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin
@@ -43,6 +44,10 @@ public class RecipeController {
     @GetMapping("/recipes/meal/{mealType}")
     public  Collection<Recipe> getRecipesByMealType(@PathVariable String mealType) {
         return (Collection<Recipe>) recipeRepo.findByMealType(mealType.toLowerCase()); }
+
+    @GetMapping("/recipes/recipe/{id}")
+    public Optional<Recipe> getRecipes(@PathVariable Long id) {
+        return recipeRepo.findById(id);}
 
     @GetMapping("/recipes/{difficultyLevel}")
     public  Collection<Recipe> getRecipesByDifficultyLevel(@PathVariable String difficultyLevel) {

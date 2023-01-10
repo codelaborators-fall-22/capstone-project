@@ -9,9 +9,9 @@ import twitterIcon from '../../assets/Twittericon.jpg';
 const Footer = () => {
   return (
     <div className={style.footer}>
-      <img src={tikTokIcon} alt= 'TikTok' />
-      <img src={igIcon} alt= 'Ig' />
-      <img src={twitterIcon} alt= 'Twitter' />
+      <img src={tikTokIcon} alt='TikTok' />
+      <img src={igIcon} alt='Ig' />
+      <img src={twitterIcon} alt='Twitter' />
     </div>
   );
 }
