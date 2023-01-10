@@ -40,4 +40,6 @@ public class Comment {
         this.userName = userName;
         this.recipe = recipe;
     }
+
+    public Comment(){}
 }

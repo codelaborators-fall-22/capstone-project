@@ -43,7 +43,6 @@ const SingleRecipeScreen = () => {
 
 
   const submitComment = () => {
-
     Axios.post(`http://localhost:8080/recipes/recipe/${id.id}/add-comment`, comment).then((response) => {
       console.log(response.status);
       console.log('DATA', response.data);
@@ -105,11 +104,11 @@ const SingleRecipeScreen = () => {
             )
           })}
         </ul>
-        <form>
+        <div className={style.submitCommentForm}>
           <textarea onChange={(e) => setCommentText(e.target.value)} placeholder='What did you think of this recipe?'></textarea>
           <input onChange={(e) => setName(e.target.value)} type='text' placeholder='name'></input>
           <button onClick={() => submitComment()}>Submit</button>
-        </form>
+        </div>
       </div>
   )
 }
