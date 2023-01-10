@@ -8,7 +8,9 @@ const Header = () => {
     <div className={style.header}>
       <div>
         <nav className={style.logo}>
-          <NavLink to={'/'}>{ForkLogo}</NavLink>
+          <NavLink to={'/'}>
+            <img src={ForkLogo} alt='' />
+          </NavLink>
         </nav>
       </div>
       <div>

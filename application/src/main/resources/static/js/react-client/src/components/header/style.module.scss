@@ -15,23 +15,24 @@
         height: auto;
     }
 
-} 
+}
 
 .logo {
     & img {
-        height: 20px;
+        height: 80px;
         justify-content: center;
         width: auto;
-      }
+    }
 
 }
+
 .nav {
     display: flex;
 
     & a {
-        
+
         align-items: center;
-       
+
         border-radius: 10px;
         display: flex;
         justify-content: center;
@@ -46,13 +47,13 @@
         text-decoration: none;
     }
 
-    
+
     @media (max-width: 750px) {
         .header {
             width: 100%;
-            
-          }
+
+        }
 
 
-    }  
+    }
 }

@@ -34,21 +34,28 @@
         position: absolute;
         margin: auto;
         top: 40%;
-        width: 50%;
+        width: 30%;
         right: 0px;
         left: 0px;
 
-
         & label {
-
             padding: 20px;
         }
 
-
-
-
-
+        @media(max-width: 900px) {
+            width: 75%;
+            ;
+        }
 
     }
+
+    & label {
+        padding: 20px;
+    }
+
+
+
+
+
 
 }
